@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teamNameInput: {fileID: 2075019678479437031}
-  rocketDropdown: {fileID: 6752955389215751818}
+  spaceshipDropdown: {fileID: 6752955389215751818}
 --- !u!1 &135779825177554491
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,7 +457,7 @@ GameObject:
   - component: {fileID: 1816139413341462175}
   - component: {fileID: 2827554580496243090}
   m_Layer: 5
-  m_Name: RocketDropdown
+  m_Name: SpaceshipDropdown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -763,7 +763,7 @@ GameObject:
   - component: {fileID: 6939554932895882267}
   - component: {fileID: 3155819132951883047}
   m_Layer: 5
-  m_Name: Ship
+  m_Name: Spaceship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -2,11 +2,13 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System;
+using System.Linq;
 
 public class TeamEntry : MonoBehaviour
 {
     [SerializeField] private TMP_InputField teamNameInput;
-    [SerializeField] private TMP_Dropdown rocketDropdown;
+    [SerializeField] private TMP_Dropdown spaceshipDropdown;
 
     private void Start()
     {
@@ -16,8 +18,9 @@ public class TeamEntry : MonoBehaviour
     private void InitializeDropdowns()
     {
         // Setup rocket options
-        rocketDropdown.ClearOptions();
-        rocketDropdown.AddOptions(new List<string> { "Default Rocket", "Sleek Rocket", "Retro Rocket" });
+        spaceshipDropdown.ClearOptions();
+        
+        spaceshipDropdown.AddOptions(Enum.GetNames(typeof(Spaceship)).ToList());
     }
 
     public GameSettingsSO.TeamData GetTeamData()
@@ -25,7 +28,24 @@ public class TeamEntry : MonoBehaviour
         return new GameSettingsSO.TeamData
         {
             teamName = string.IsNullOrEmpty(teamNameInput.text) ? "Team" : teamNameInput.text,
-            rocket = rocketDropdown.options[rocketDropdown.value].text
+            rocket = spaceshipDropdown.options[spaceshipDropdown.value].text
         };
     }
+
+    internal Spaceship GetSpaceship()
+    {
+        return (Spaceship)spaceshipDropdown.value;
+    }
+}
+
+public enum Spaceship
+{
+    Yellow,
+    Red,
+    Black,
+    Purple,
+    Blue,
+    Orange,
+    Gray,
+    Green
 }

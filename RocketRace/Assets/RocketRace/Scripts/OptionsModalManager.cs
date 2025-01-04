@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
+using System;
 
 public class OptionsModalManager : MonoBehaviour
 {
@@ -99,6 +100,8 @@ public class OptionsModalManager : MonoBehaviour
 
     private void StartGame()
     {
+        if(!CanStartGame()) return;
+        
         // Update settings before loading new scene
         gameSettings.soundSet = soundSetDropdown.options[soundSetDropdown.value].text;
         gameSettings.timerDuration = GetTimerDuration();
@@ -114,6 +117,24 @@ public class OptionsModalManager : MonoBehaviour
 
         UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
         CloseModal();
+    }
+
+    private bool CanStartGame()
+    {
+        for (int i = 0; i < teamEntries.Count; i++)
+        {
+            for (int j = 0; j < teamEntries.Count; j++)
+            {
+                if (i == j) continue;
+                
+                if (teamEntries[i].GetSpaceship() == teamEntries[j].GetSpaceship())
+                {
+                    Debug.Log("Duplicate spaceship selected!");
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
     private int GetTimerDuration()
