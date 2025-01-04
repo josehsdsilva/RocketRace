@@ -1166,8 +1166,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 286250978}
-  - component: {fileID: 286250977}
   - component: {fileID: 286250979}
+  - component: {fileID: 286250977}
   m_Layer: 0
   m_Name: BackgroundMusic
   m_TagString: Untagged
@@ -5685,6 +5685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1cd14aa55dcacb418bd301d3a5f9cd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameSettings: {fileID: 11400000, guid: 95f86a6977b08d5469919aa3109ba7bd, type: 2}
   modalPanel: {fileID: 1500410978}
   playButton: {fileID: 758688825}
   closeButton: {fileID: 283099487}
@@ -5696,7 +5697,6 @@ MonoBehaviour:
   teamListContent: {fileID: 1250071976}
   teamEntryPrefab: {fileID: 109005702350278123, guid: 7cd778d870952724d8d891f941e4466d,
     type: 3}
-  maxTeams: 6
 --- !u!4 &1519526533
 Transform:
   m_ObjectHideFlags: 0

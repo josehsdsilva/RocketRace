@@ -2,11 +2,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
-using System.Linq;
-using System;
 
 public class OptionsModalManager : MonoBehaviour
 {
+    [Header("Settings")]
+    [SerializeField] private GameSettingsSO gameSettings;
+
     [Header("References")]
     [SerializeField] private GameObject modalPanel;
     [SerializeField] private Button playButton;
@@ -19,38 +20,17 @@ public class OptionsModalManager : MonoBehaviour
     [SerializeField] private Transform teamListContent;
     [SerializeField] private GameObject teamEntryPrefab;
 
-    [Header("Settings")]
-    [SerializeField] private int maxTeams = 20;
-
     private List<TeamEntry> teamEntries = new List<TeamEntry>();
-
-    [Serializable]
-    public class GameSettings
-    {
-        public string soundSet;
-        public int timerDuration;
-        public int numberOfRounds;
-        public List<TeamData> teams;
-    }
-
-    [Serializable]
-    public class TeamData
-    {
-        public string teamName;
-        public string rocket;
-    }
 
     private void Start()
     {
         InitializeUI();
         SetupEventListeners();
-        AddTeam();
+        AddTeam(); // Add first team by default
     }
 
     private void InitializeUI()
     {
-        teamEntries = new List<TeamEntry>();
-
         // Initialize Sound Set Dropdown
         soundSetDropdown.ClearOptions();
         soundSetDropdown.AddOptions(new List<string> { "instruments", "chords" });
@@ -76,26 +56,9 @@ public class OptionsModalManager : MonoBehaviour
         removeTeamButton.onClick.AddListener(RemoveTeam);
     }
 
-    private void RemoveTeam()
-    {
-        if (teamEntries.Count == 1)
-        {
-            Debug.Log("Cannot remove last team!");
-            return;
-        }
-
-        TeamEntry teamEntry = teamEntries[teamEntries.Count - 1];
-        teamEntries.Remove(teamEntry);
-        Destroy(teamEntry.gameObject);
-
-        // Update UI to reflect team count
-        addTeamButton.interactable = teamEntries.Count < maxTeams;
-        removeTeamButton.interactable = teamEntries.Count > 1;
-    }
-
     private void AddTeam()
     {
-        if (teamEntries.Count >= maxTeams)
+        if (teamEntries.Count >= gameSettings.maxTeams)
         {
             Debug.Log("Maximum number of teams reached!");
             return;
@@ -105,8 +68,27 @@ public class OptionsModalManager : MonoBehaviour
         TeamEntry teamEntry = teamEntryObj.GetComponent<TeamEntry>();
         teamEntries.Add(teamEntry);
 
-        // Update UI to reflect team count
-        addTeamButton.interactable = teamEntries.Count < maxTeams;
+        UpdateButtonStates();
+    }
+
+    private void RemoveTeam()
+    {
+        if (teamEntries.Count <= 1)
+        {
+            Debug.Log("Cannot remove last team!");
+            return;
+        }
+
+        TeamEntry teamEntry = teamEntries[teamEntries.Count - 1];
+        teamEntries.Remove(teamEntry);
+        Destroy(teamEntry.gameObject);
+
+        UpdateButtonStates();
+    }
+
+    private void UpdateButtonStates()
+    {
+        addTeamButton.interactable = teamEntries.Count < gameSettings.maxTeams;
         removeTeamButton.interactable = teamEntries.Count > 1;
     }
 
@@ -117,27 +99,25 @@ public class OptionsModalManager : MonoBehaviour
 
     private void StartGame()
     {
-        GameSettings settings = GatherSettings();
+        // Update settings before loading new scene
+        gameSettings.soundSet = soundSetDropdown.options[soundSetDropdown.value].text;
+        gameSettings.timerDuration = GetTimerDuration();
+        gameSettings.numberOfRounds = GetNumberOfRounds();
+        
+        // Update teams
+        var teamDataList = new List<GameSettingsSO.TeamData>();
+        foreach (var entry in teamEntries)
+        {
+            teamDataList.Add(entry.GetTeamData());
+        }
+        gameSettings.UpdateTeams(teamDataList);
+
         UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
         CloseModal();
     }
 
-    private GameSettings GatherSettings()
-    {
-        GameSettings settings = new GameSettings
-        {
-            soundSet = soundSetDropdown.options[soundSetDropdown.value].text.ToLower(),
-            timerDuration = GetTimerDuration(),
-            numberOfRounds = GetNumberOfRounds(),
-            teams = teamEntries.Select(entry => entry.GetTeamData()).ToList()
-        };
-
-        return settings;
-    }
-
     private int GetTimerDuration()
     {
-        // Convert dropdown selection to seconds
         switch (timerDropdown.value)
         {
             case 0: return 60;
@@ -150,7 +130,6 @@ public class OptionsModalManager : MonoBehaviour
 
     private int GetNumberOfRounds()
     {
-        // Convert dropdown selection to number of rounds
         switch (roundsDropdown.value)
         {
             case 0: return 3;

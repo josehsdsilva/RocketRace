@@ -1,7 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class TeamEntry : MonoBehaviour
 {
@@ -10,22 +10,22 @@ public class TeamEntry : MonoBehaviour
 
     private void Start()
     {
-        InitializeDropdown();
+        InitializeDropdowns();
     }
 
-    private void InitializeDropdown()
+    private void InitializeDropdowns()
     {
-        // Setup rocket design options
+        // Setup rocket options
         rocketDropdown.ClearOptions();
-        rocketDropdown.AddOptions(new List<string> { "Blue", "Red", "Green", "Yellow" });
+        rocketDropdown.AddOptions(new List<string> { "Default Rocket", "Sleek Rocket", "Retro Rocket" });
     }
 
-    public OptionsModalManager.TeamData GetTeamData()
+    public GameSettingsSO.TeamData GetTeamData()
     {
-        return new OptionsModalManager.TeamData
+        return new GameSettingsSO.TeamData
         {
-            teamName = teamNameInput.text,
-            rocket = rocketDropdown.options[rocketDropdown.value].text,
+            teamName = string.IsNullOrEmpty(teamNameInput.text) ? "Team" : teamNameInput.text,
+            rocket = rocketDropdown.options[rocketDropdown.value].text
         };
     }
 }
