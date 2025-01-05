@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System;
 
 [CreateAssetMenu(fileName = "GameSettings", menuName = "RocketRace/GameSettings")]
 public class GameSettingsSO : ScriptableObject
@@ -17,7 +18,12 @@ public class GameSettingsSO : ScriptableObject
     public class TeamData
     {
         public string teamName;
-        public string rocket;
+        public SpaceshipColor spaceshipColor;
+
+        internal SpaceshipColor GetSpaceshipColor()
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public void UpdateTeams(List<TeamData> teams)

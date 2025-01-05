@@ -16,3 +16,8 @@ MonoBehaviour:
   timerDuration: 120
   numberOfRounds: 5
   maxTeams: 20
+  currentTeams:
+  - teamName: equipa 1
+    spaceshipColor: 0
+  - teamName: equipa 2
+    spaceshipColor: 2

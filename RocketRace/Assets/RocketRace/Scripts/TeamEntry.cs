@@ -20,7 +20,7 @@ public class TeamEntry : MonoBehaviour
         // Setup rocket options
         spaceshipDropdown.ClearOptions();
         
-        spaceshipDropdown.AddOptions(Enum.GetNames(typeof(Spaceship)).ToList());
+        spaceshipDropdown.AddOptions(Enum.GetNames(typeof(SpaceshipColor)).ToList());
     }
 
     public GameSettingsSO.TeamData GetTeamData()
@@ -28,24 +28,26 @@ public class TeamEntry : MonoBehaviour
         return new GameSettingsSO.TeamData
         {
             teamName = string.IsNullOrEmpty(teamNameInput.text) ? "Team" : teamNameInput.text,
-            rocket = spaceshipDropdown.options[spaceshipDropdown.value].text
+            spaceshipColor = (SpaceshipColor)spaceshipDropdown.value
         };
     }
 
-    internal Spaceship GetSpaceship()
+    internal SpaceshipColor GetSpaceshipColor()
     {
-        return (Spaceship)spaceshipDropdown.value;
+        return (SpaceshipColor)spaceshipDropdown.value;
     }
 }
 
-public enum Spaceship
+public enum SpaceshipColor
 {
-    Yellow,
-    Red,
     Black,
-    Purple,
-    Blue,
+    Cyan,
     Orange,
-    Gray,
-    Green
+    Yellow,
+    Blue,
+    Grey,
+    Green,
+    Purple,
+    Red,
+    White
 }

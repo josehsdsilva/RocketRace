@@ -127,7 +127,7 @@ public class OptionsModalManager : MonoBehaviour
             {
                 if (i == j) continue;
                 
-                if (teamEntries[i].GetSpaceship() == teamEntries[j].GetSpaceship())
+                if (teamEntries[i].GetSpaceshipColor() == teamEntries[j].GetSpaceshipColor())
                 {
                     Debug.Log("Duplicate spaceship selected!");
                     return false;
