@@ -14,6 +14,7 @@ public class AnswerOption : MonoBehaviour
 
     internal void SetAnswerOption(AnswerData answerData, Action<int> onAnswer)
     {
+        answerImage.gameObject.SetActive(answerData.sprite);
         answerImage.sprite = answerData.sprite;
         answerText.text = answerData.answerText;
         answerButton.onClick.AddListener(() => onAnswer?.Invoke(transform.GetSiblingIndex()));

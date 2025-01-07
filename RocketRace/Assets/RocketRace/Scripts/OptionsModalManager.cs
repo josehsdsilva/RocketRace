@@ -39,7 +39,7 @@ public class OptionsModalManager : MonoBehaviour
 
         // Initialize Timer Dropdown
         timerDropdown.ClearOptions();
-        timerDropdown.AddOptions(new List<string> { "60 seconds", "90 seconds", "120 seconds (Default)", "180 seconds" });
+        timerDropdown.AddOptions(new List<string> { "15 seconds", "30 seconds", "45 seconds (Default)", "60 seconds" });
         timerDropdown.value = 2; // Default to 120 seconds
 
         // Initialize Rounds Dropdown
@@ -143,11 +143,11 @@ public class OptionsModalManager : MonoBehaviour
     {
         switch (timerDropdown.value)
         {
-            case 0: return 60;
-            case 1: return 90;
-            case 2: return 120;
-            case 3: return 180;
-            default: return 120;
+            case 0: return 15;
+            case 1: return 30;
+            case 2: return 45;
+            case 3: return 60;
+            default: return 15;
         }
     }
 

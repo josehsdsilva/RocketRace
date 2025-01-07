@@ -12,25 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2b14b4a2373d249a82468319c5a733, type: 3}
   m_Name: GameSettings
   m_EditorClassIdentifier: 
-  soundSet: instruments
-  timerDuration: 120
+  soundSet: 0
+  timerDuration: 5
   numberOfRounds: 5
   currentTeams:
-  - teamName: q
+  - teamName: teste 1
+    spaceshipType: 0
     spaceshipColor: 0
-    spaceshipType: 0
-  - teamName: w
-    spaceshipColor: 1
-    spaceshipType: 0
-  - teamName: e
-    spaceshipColor: 3
-    spaceshipType: 0
-  - teamName: r
-    spaceshipColor: 2
-    spaceshipType: 0
-  - teamName: t
-    spaceshipColor: 0
+  - teamName: teste 2
     spaceshipType: 2
-  - teamName: u
-    spaceshipColor: 0
-    spaceshipType: 3
+    spaceshipColor: 1

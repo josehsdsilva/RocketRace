@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class QuestionController : MonoBehaviour
 {
@@ -10,29 +11,61 @@ public class QuestionController : MonoBehaviour
     [SerializeField] private TMP_Text questionText;
     [SerializeField] private TMP_Text currentTeamText;
     [SerializeField] private TMP_Text currentRoundText;
+    [SerializeField] private TMP_Text timerText;
+    [SerializeField] private RawImage spaceshipRender;
     [SerializeField] private AnswerOption answerOptionPrefab;
     [SerializeField] private Transform answerOptionsParent;
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private List<RenderTexture> renderTextures;
     
     [Header("Data")]
     [SerializeField] private GameSettingsSO gameSettings;
 
     private QuestionData currentQuestionData;
+    private Action<bool> onAnswered;
+    private List<AnswerOption> answerOptions = new List<AnswerOption>();
 
-    internal void SetQuestionData(QuestionData questionData, int currentRound, int maxRounds, string currentTeamName)
+    private float timer;
+    private bool answering;
+
+    private void Update()
     {
-        currentRoundText.text = $"Round: {currentRound + 1} / {maxRounds}";
-        currentTeamText.text = $"Team: {currentTeamName}";
+        if (answering)
+        {
+            timer -= Time.deltaTime;
+            timerText.text = Mathf.CeilToInt(timer).ToString();
+            if (timer <= 0)
+            {
+                OnAnswerClick(-1);
+            }
+        }
+    }
 
+    internal void SetQuestionData(QuestionData questionData, int currentRound, int currentTeamIndex, string currentTeamName, Action<bool> onAnswered)
+    {
+        this.onAnswered = onAnswered;
         currentQuestionData = questionData;
-        ClearQuestion();
+
+        currentRoundText.text = $"Round: {currentRound + 1} / {gameSettings.numberOfRounds}";
+        currentTeamText.text = $"Team: {currentTeamName}";
 
         questionText.text = questionData.questionText;
 
-        foreach (AnswerData answerData in questionData.answerOptions)
+        answering = true;
+        timer = gameSettings.timerDuration;
+
+        spaceshipRender.texture = renderTextures[currentTeamIndex];
+
+        for (int i = 0; i < questionData.answerOptions.Count; i++)
         {
-            AnswerOption answerOption = Instantiate(answerOptionPrefab, answerOptionsParent);
-            answerOption.SetAnswerOption(answerData, OnAnswerClick);
+            AnswerOption answerOption = answerOptions.Count > i ? answerOptions[i] : Instantiate(answerOptionPrefab, answerOptionsParent);
+            answerOption.gameObject.SetActive(true);
+            answerOption.SetAnswerOption(questionData.answerOptions[i], OnAnswerClick);
+            if(i >= answerOptions.Count) answerOptions.Add(answerOption);
+        }
+        for (int i = questionData.answerOptions.Count; i < answerOptions.Count; i++)
+        {
+            answerOptions[i].gameObject.SetActive(false);
         }
 
         audioSource.clip = questionData.questionAudio;
@@ -41,22 +74,9 @@ public class QuestionController : MonoBehaviour
 
     private void OnAnswerClick(int answerIndex)
     {
-        if(currentQuestionData.correctAnswerIndex == answerIndex)
-        {
-            Debug.Log("Correct Answer!");
-        }
-        else
-        {
-            Debug.Log("Wrong Answer!");
-        }
-    }
+        if (!answering) return;
 
-    private void ClearQuestion()
-    {
-        foreach (Transform child in answerOptionsParent)
-        {
-            Destroy(child.gameObject);
-        }
+        answering = false;
+        onAnswered?.Invoke(currentQuestionData.correctAnswerIndex == answerIndex);
     }
-
 }

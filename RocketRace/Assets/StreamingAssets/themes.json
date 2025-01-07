@@ -1048,23 +1048,15 @@
                     "questionAudio": "Audio/Chords/A MAJOR_1",
                     "answerOptions": [
                         {
-                            "answerText": "c major",
+                            "answerText": "a major",
                             "spritePath": ""
                         },
                         {
                             "answerText": "a minor",
                             "spritePath": ""
-                        },
-                        {
-                            "answerText": "e minor",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "a major",
-                            "spritePath": ""
                         }
                     ],
-                    "correctAnswerIndex": 3
+                    "correctAnswerIndex": 0
                 },
                 {
                     "questionText": "what chord is playing?",
@@ -1077,14 +1069,6 @@
                         {
                             "answerText": "a minor",
                             "spritePath": ""
-                        },
-                        {
-                            "answerText": "e minor",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "c minor",
-                            "spritePath": ""
                         }
                     ],
                     "correctAnswerIndex": 1
@@ -1094,38 +1078,7 @@
                     "questionAudio": "Audio/Chords/A SHARP MAJOR_1",
                     "answerOptions": [
                         {
-                            "answerText": "g sharp major",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "b flat major",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "a major",
-                            "spritePath": ""
-                        },
-                        {
                             "answerText": "a sharp major",
-                            "spritePath": ""
-                        }
-                    ],
-                    "correctAnswerIndex": 3
-                },
-                {
-                    "questionText": "what chord is playing?",
-                    "questionAudio": "Audio/Chords/A SHARP MINOR_1",
-                    "answerOptions": [
-                        {
-                            "answerText": "b flat minor",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "a minor",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "g sharp minor",
                             "spritePath": ""
                         },
                         {
@@ -1133,53 +1086,52 @@
                             "spritePath": ""
                         }
                     ],
-                    "correctAnswerIndex": 3
+                    "correctAnswerIndex": 0
+                },
+                {
+                    "questionText": "what chord is playing?",
+                    "questionAudio": "Audio/Chords/A SHARP MINOR_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "a sharp minor",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "a sharp major",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 0
                 },
                 {
                     "questionText": "what chord is playing?",
                     "questionAudio": "Audio/Chords/B MAJOR_1",
                     "answerOptions": [
                         {
-                            "answerText": "d major",
-                            "spritePath": ""
-                        },
-                        {
                             "answerText": "b minor",
                             "spritePath": ""
                         },
                         {
                             "answerText": "b major",
                             "spritePath": ""
-                        },
-                        {
-                            "answerText": "g major",
-                            "spritePath": ""
                         }
                     ],
-                    "correctAnswerIndex": 2
+                    "correctAnswerIndex": 1
                 },
                 {
                     "questionText": "what chord is playing?",
                     "questionAudio": "Audio/Chords/B MINOR_1",
                     "answerOptions": [
                         {
-                            "answerText": "g minor",
-                            "spritePath": ""
-                        },
-                        {
                             "answerText": "b minor",
                             "spritePath": ""
                         },
                         {
                             "answerText": "b major",
                             "spritePath": ""
-                        },
-                        {
-                            "answerText": "d minor",
-                            "spritePath": ""
                         }
                     ],
-                    "correctAnswerIndex": 1
+                    "correctAnswerIndex": 0
                 },
                 {
                     "questionText": "what chord is playing?",
@@ -1192,14 +1144,6 @@
                         {
                             "answerText": "c minor",
                             "spritePath": ""
-                        },
-                        {
-                            "answerText": "a major",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "f major",
-                            "spritePath": ""
                         }
                     ],
                     "correctAnswerIndex": 0
@@ -1209,42 +1153,11 @@
                     "questionAudio": "Audio/Chords/C MINOR_1",
                     "answerOptions": [
                         {
-                            "answerText": "a minor",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "c major",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "f minor",
-                            "spritePath": ""
-                        },
-                        {
                             "answerText": "c minor",
                             "spritePath": ""
-                        }
-                    ],
-                    "correctAnswerIndex": 3
-                },
-                {
-                    "questionText": "what chord is playing?",
-                    "questionAudio": "Audio/Chords/C SHARP MAJOR_1",
-                    "answerOptions": [
-                        {
-                            "answerText": "c sharp major",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "d flat major",
-                            "spritePath": ""
                         },
                         {
                             "answerText": "c major",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "a sharp major",
                             "spritePath": ""
                         }
                     ],
@@ -1252,26 +1165,33 @@
                 },
                 {
                     "questionText": "what chord is playing?",
-                    "questionAudio": "Audio/Chords/C SHARP MINOR_1",
+                    "questionAudio": "Audio/Chords/C SHARP MAJOR_1",
                     "answerOptions": [
-                        {
-                            "answerText": "d flat minor",
-                            "spritePath": ""
-                        },
                         {
                             "answerText": "c sharp minor",
                             "spritePath": ""
                         },
                         {
-                            "answerText": "a sharp minor",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "c minor",
+                            "answerText": "c sharp major",
                             "spritePath": ""
                         }
                     ],
                     "correctAnswerIndex": 1
+                },
+                {
+                    "questionText": "what chord is playing?",
+                    "questionAudio": "Audio/Chords/C SHARP MINOR_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "c sharp minor",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "c sharp major",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 0
                 },
                 {
                     "questionText": "what chord is playing?",
@@ -1282,19 +1202,11 @@
                             "spritePath": ""
                         },
                         {
-                            "answerText": "g major",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "b major",
-                            "spritePath": ""
-                        },
-                        {
                             "answerText": "d major",
                             "spritePath": ""
                         }
                     ],
-                    "correctAnswerIndex": 3
+                    "correctAnswerIndex": 1
                 },
                 {
                     "questionText": "what chord is playing?",
@@ -1307,14 +1219,6 @@
                         {
                             "answerText": "d minor",
                             "spritePath": ""
-                        },
-                        {
-                            "answerText": "b minor",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "g minor",
-                            "spritePath": ""
                         }
                     ],
                     "correctAnswerIndex": 1
@@ -1324,46 +1228,30 @@
                     "questionAudio": "Audio/Chords/D SHARP MAJOR_1",
                     "answerOptions": [
                         {
-                            "answerText": "d major",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "e flat major",
-                            "spritePath": ""
-                        },
-                        {
                             "answerText": "d sharp major",
                             "spritePath": ""
                         },
                         {
-                            "answerText": "b sharp major",
+                            "answerText": "d sharp minor",
                             "spritePath": ""
                         }
                     ],
-                    "correctAnswerIndex": 2
+                    "correctAnswerIndex": 0
                 },
                 {
                     "questionText": "what chord is playing?",
                     "questionAudio": "Audio/Chords/D SHARP MINOR_1",
                     "answerOptions": [
                         {
-                            "answerText": "e flat minor",
-                            "spritePath": ""
-                        },
-                        {
                             "answerText": "d sharp minor",
                             "spritePath": ""
                         },
                         {
-                            "answerText": "b sharp minor",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "d minor",
+                            "answerText": "d sharp major",
                             "spritePath": ""
                         }
                     ],
-                    "correctAnswerIndex": 1
+                    "correctAnswerIndex": 0
                 },
                 {
                     "questionText": "what chord is playing?",
@@ -1374,19 +1262,11 @@
                             "spritePath": ""
                         },
                         {
-                            "answerText": "c major",
-                            "spritePath": ""
-                        },
-                        {
                             "answerText": "e major",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "a major",
                             "spritePath": ""
                         }
                     ],
-                    "correctAnswerIndex": 2
+                    "correctAnswerIndex": 1
                 },
                 {
                     "questionText": "what chord is playing?",
@@ -1399,14 +1279,6 @@
                         {
                             "answerText": "e major",
                             "spritePath": ""
-                        },
-                        {
-                            "answerText": "c minor",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "a minor",
-                            "spritePath": ""
                         }
                     ],
                     "correctAnswerIndex": 0
@@ -1416,23 +1288,15 @@
                     "questionAudio": "Audio/Chords/F MAJOR_1",
                     "answerOptions": [
                         {
-                            "answerText": "a sharp major",
+                            "answerText": "f major",
                             "spritePath": ""
                         },
                         {
                             "answerText": "f minor",
                             "spritePath": ""
-                        },
-                        {
-                            "answerText": "f major",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "d major",
-                            "spritePath": ""
                         }
                     ],
-                    "correctAnswerIndex": 2
+                    "correctAnswerIndex": 0
                 },
                 {
                     "questionText": "what chord is playing?",
@@ -1443,15 +1307,7 @@
                             "spritePath": ""
                         },
                         {
-                            "answerText": "d minor",
-                            "spritePath": ""
-                        },
-                        {
                             "answerText": "f major",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "a sharp minor",
                             "spritePath": ""
                         }
                     ],
@@ -1462,19 +1318,11 @@
                     "questionAudio": "Audio/Chords/F SHARP MAJOR_1",
                     "answerOptions": [
                         {
-                            "answerText": "d sharp major",
+                            "answerText": "f sharp minor",
                             "spritePath": ""
                         },
                         {
                             "answerText": "f sharp major",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "f major",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "g flat major",
                             "spritePath": ""
                         }
                     ],
@@ -1489,15 +1337,7 @@
                             "spritePath": ""
                         },
                         {
-                            "answerText": "f minor",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "d sharp minor",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "g flat minor",
+                            "answerText": "f sharp major",
                             "spritePath": ""
                         }
                     ],
@@ -1508,37 +1348,21 @@
                     "questionAudio": "Audio/Chords/G MAJOR_1",
                     "answerOptions": [
                         {
-                            "answerText": "c major",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "e major",
+                            "answerText": "g major",
                             "spritePath": ""
                         },
                         {
                             "answerText": "g minor",
                             "spritePath": ""
-                        },
-                        {
-                            "answerText": "g major",
-                            "spritePath": ""
                         }
                     ],
-                    "correctAnswerIndex": 3
+                    "correctAnswerIndex": 0
                 },
                 {
                     "questionText": "what chord is playing?",
                     "questionAudio": "Audio/Chords/G MINOR_1",
                     "answerOptions": [
                         {
-                            "answerText": "e minor",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "c minor",
-                            "spritePath": ""
-                        },
-                        {
                             "answerText": "g major",
                             "spritePath": ""
                         },
@@ -1547,7 +1371,7 @@
                             "spritePath": ""
                         }
                     ],
-                    "correctAnswerIndex": 3
+                    "correctAnswerIndex": 1
                 },
                 {
                     "questionText": "what chord is playing?",
@@ -1555,14 +1379,6 @@
                     "answerOptions": [
                         {
                             "answerText": "g sharp major",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "c minor",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "e minor",
                             "spritePath": ""
                         },
                         {
@@ -1577,15 +1393,7 @@
                     "questionAudio": "Audio/Chords/G SHARP MINOR_1",
                     "answerOptions": [
                         {
-                            "answerText": "c minor",
-                            "spritePath": ""
-                        },
-                        {
                             "answerText": "g sharp major",
-                            "spritePath": ""
-                        },
-                        {
-                            "answerText": "g minor",
                             "spritePath": ""
                         },
                         {
@@ -1593,7 +1401,7 @@
                             "spritePath": ""
                         }
                     ],
-                    "correctAnswerIndex": 3
+                    "correctAnswerIndex": 1
                 }
             ]
         }

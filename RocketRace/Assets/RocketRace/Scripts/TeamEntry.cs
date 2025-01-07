@@ -50,7 +50,6 @@ public class TeamEntry : MonoBehaviour
 // lower case cause of font limitation
 public enum SpaceshipColor
 {
-    black,
     cyan,
     orange,
     yellow,
@@ -59,7 +58,8 @@ public enum SpaceshipColor
     green,
     purple,
     red,
-    white
+    white,
+    black
 }
 
 // lower case cause of font limitation

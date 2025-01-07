@@ -40,8 +40,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private QuestionDataLoader questionDataLoader;
 
     [Header("References")]
-    [SerializeField] private SpaceshipController spaceshipController;
     [SerializeField] private QuestionController questionController;
+    [SerializeField] private TeamScore teamScorePrefab;
+    [SerializeField] private Transform teamScoresParent;
+    [SerializeField] private NotificationController notificationController;
 
     private int currentRound = 0;
     private int currentTeamIndex = 0;
@@ -49,6 +51,8 @@ public class GameManager : MonoBehaviour
     private GameSettingsSO.TeamData currentTeam;
     private List<QuestionData> questionData;
     private List<QuestionThemeData> questionDatas;
+    private QuestionData currentQuestionData;
+    private List<TeamScore> teamScores = new List<TeamScore>();
 
     private void Start()
     {
@@ -62,22 +66,17 @@ public class GameManager : MonoBehaviour
         questionTheme = gameSettings.questionTheme;
         questionData = questionDatas.Find(x => x.theme == questionTheme).questions;
         questionData = questionData.OrderBy(x => UnityEngine.Random.value).ToList();
+        InitializeScores();
+        StartNextTurn();
     }
-
-    private void Update()
+    
+    private void InitializeScores()
     {
-        // Check for game over condition
-        if (currentRound >= gameSettings.numberOfRounds)
+        for (int i = 0; i < gameSettings.currentTeams.Count; i++)
         {
-            spaceshipController.ResetPosition();
-            Debug.Log("Game Ended!");
-            return;
-        }
-
-        // Check for turn end condition
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            StartNextTurn();
+            TeamScore teamScore = Instantiate(teamScorePrefab, teamScoresParent);
+            teamScore.SetTeamScore(gameSettings.currentTeams[i].teamName, 0, i);
+            teamScores.Add(teamScore);
         }
     }
 
@@ -85,9 +84,8 @@ public class GameManager : MonoBehaviour
     {
         // Get the current team
         currentTeam = gameSettings.currentTeams[currentTeamIndex];
-
-        spaceshipController.SetOnQuestion(currentTeam.spaceshipType, currentTeam.spaceshipColor);
-        questionController.SetQuestionData(questionData[currentTeamIndex + currentRound *  gameSettings.currentTeams.Count], currentRound, gameSettings.numberOfRounds, currentTeam.teamName);
+        currentQuestionData = questionData[currentTeamIndex + currentRound *  gameSettings.currentTeams.Count];
+        questionController.SetQuestionData(currentQuestionData, currentRound, currentTeamIndex, currentTeam.teamName, OnPlayAnswered);
 
         // Increment the team index
         currentTeamIndex++;
@@ -96,5 +94,35 @@ public class GameManager : MonoBehaviour
             currentTeamIndex = 0;
             currentRound++;
         }
+    }
+
+    private void OnPlayAnswered(bool isCorrect)
+    {
+        if (isCorrect)
+        {
+            notificationController.ShowNotification("Correct Answer!", "Well done!", OnNotificationClosed);
+        }
+        else
+        {
+            notificationController.ShowNotification("Incorrect Answer!", "Better luck next time!", OnNotificationClosed);
+        }
+
+        teamScores[currentTeamIndex].AddScore(isCorrect);
+    }
+
+    private void OnNotificationClosed()
+    {
+        if (currentRound >= gameSettings.numberOfRounds)
+        {
+            notificationController.ShowNotification("Game ended", "Let's see who won", ShowWinners);
+            return;
+        }
+
+        StartNextTurn();
+    }
+
+    private void ShowWinners()
+    {
+        // ToDo: ShowWinners
     }
 }
