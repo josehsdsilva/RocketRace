@@ -6,8 +6,8 @@ using UnityEngine;
 
 public enum QuestionTheme
 {
-    Instruments,
-    Chords
+    instruments,
+    chords
 }
 
 [Serializable]

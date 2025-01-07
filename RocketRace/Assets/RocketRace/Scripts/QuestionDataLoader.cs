@@ -34,6 +34,48 @@ public class GameData
     public List<JSONThemeData> themes;
 }
 
+public class AudioLoader : CustomYieldInstruction
+{
+    private UnityWebRequest www;
+    public AudioClip Clip { get; private set; }
+    public string Error { get; private set; }
+    private bool isDone;
+
+    public override bool keepWaiting => !isDone;
+
+    public AudioLoader(string audioPath)
+    {
+        if (string.IsNullOrEmpty(audioPath))
+        {
+            isDone = true;
+            return;
+        }
+
+        string fullPath = Path.Combine(Application.streamingAssetsPath, audioPath + ".wav");
+        #if UNITY_WEBGL && !UNITY_EDITOR
+            fullPath = System.Uri.EscapeUriString(fullPath);
+        #endif
+        
+        www = UnityWebRequestMultimedia.GetAudioClip(fullPath, AudioType.WAV);
+        www.SendWebRequest().completed += _ => OnRequestComplete(audioPath + ".wav");
+    }
+
+    private void OnRequestComplete(string audioPath)
+    {
+        if (www.result == UnityWebRequest.Result.Success)
+        {
+            Clip = DownloadHandlerAudioClip.GetContent(www);
+        }
+        else
+        {
+            Error = www.error;
+            Debug.LogError($"Failed to load audio clip {audioPath}. Error: {Error}");
+        }
+        isDone = true;
+        www?.Dispose();
+    }
+}
+
 public class QuestionDataLoader : MonoBehaviour
 {
     internal delegate void LoadComplete(List<QuestionThemeData> data);
@@ -66,42 +108,51 @@ public class QuestionDataLoader : MonoBehaviour
         string path = Path.Combine(Application.streamingAssetsPath, "themes.json");
 
         #if UNITY_WEBGL && !UNITY_EDITOR
-            path = Path.Combine(Application.streamingAssetsPath, "themes.json");
             path = System.Uri.EscapeUriString(path);
         #endif
 
         using UnityWebRequest www = UnityWebRequest.Get(path);
         yield return www.SendWebRequest();
-    
-        if (www.result == UnityWebRequest.Result.Success)
-        {
-            string jsonContent = www.downloadHandler.text;
-            try 
-            {
-                var gameData = JsonUtility.FromJson<GameData>(jsonContent);
-                if (gameData != null && gameData.themes != null)
-                {
-                    cachedQuestionData = ConvertToQuestionThemeData(gameData.themes);
-                    Debug.Log($"Successfully loaded {cachedQuestionData.Count} themes");
-                }
-                else
-                {
-                    Debug.LogWarning("JSON file was empty or had no themes");
-                    cachedQuestionData = new List<QuestionThemeData>();
-                }
-            }
-            catch (System.Exception e)
-            {
-                Debug.LogError($"Error parsing JSON: {e.Message}");
-                cachedQuestionData = new List<QuestionThemeData>();
-            }
-        }
-        else
+
+        if (www.result != UnityWebRequest.Result.Success)
         {
             Debug.LogError($"Failed to load JSON: {www.error}");
             cachedQuestionData = new List<QuestionThemeData>();
+            FinishLoading();
+            yield break;
         }
 
+        string jsonContent = www.downloadHandler.text;
+        GameData gameData = null;
+        
+        try 
+        {
+            gameData = JsonUtility.FromJson<GameData>(jsonContent);
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError($"Error parsing JSON: {e.Message}");
+            cachedQuestionData = new List<QuestionThemeData>();
+            FinishLoading();
+            yield break;
+        }
+
+        if (gameData != null && gameData.themes != null)
+        {
+            yield return StartCoroutine(ConvertToQuestionThemeDataCoroutine(gameData.themes));
+            Debug.Log($"Successfully loaded {cachedQuestionData.Count} themes");
+        }
+        else
+        {
+            Debug.LogWarning("JSON file was empty or had no themes");
+            cachedQuestionData = new List<QuestionThemeData>();
+        }
+
+        FinishLoading();
+    }
+
+    private void FinishLoading()
+    {
         isLoading = false;
         if (OnLoadComplete != null)
         {
@@ -110,41 +161,44 @@ public class QuestionDataLoader : MonoBehaviour
         }
     }
 
-    private List<QuestionThemeData> ConvertToQuestionThemeData(List<JSONThemeData> jsonThemes)
+    private IEnumerator ConvertToQuestionThemeDataCoroutine(List<JSONThemeData> jsonThemes)
     {
         var result = new List<QuestionThemeData>();
     
         foreach (var jsonTheme in jsonThemes)
         {
+            var questions = new List<QuestionData>();
+            yield return StartCoroutine(ConvertToQuestionDataCoroutine(jsonTheme.questions, questions));
+            
             var themeData = new QuestionThemeData
             {
                 theme = ParseThemeEnum(jsonTheme.theme),
-                questions = ConvertToQuestionData(jsonTheme.questions)
+                questions = questions
             };
         
             result.Add(themeData);
         }
     
-        return result;
+        cachedQuestionData = result;
     }
 
-    private List<QuestionData> ConvertToQuestionData(List<JSONQuestionData> jsonQuestions)
+    private IEnumerator ConvertToQuestionDataCoroutine(List<JSONQuestionData> jsonQuestions, List<QuestionData> result)
     {
-        var result = new List<QuestionData>();
-    
         foreach (var jsonQuestion in jsonQuestions)
         {
+            // Load audio
+            var audioLoader = new AudioLoader(jsonQuestion.questionAudio);
+            yield return audioLoader;
+
             var questionData = new QuestionData
             {
                 questionText = jsonQuestion.questionText,
-                questionAudio = LoadQuestionAudio(jsonQuestion.questionAudio),
+                questionAudio = audioLoader.Clip,
                 answerOptions = CreateAnswerOptions(jsonQuestion.answerOptions, jsonQuestion.correctAnswerIndex)
             };
         
             result.Add(questionData);
         }
-    
-        return result;
     }
 
     private List<AnswerData> CreateAnswerOptions(JSONAnswerOption[] options, int correctIndex)
@@ -188,23 +242,7 @@ public class QuestionDataLoader : MonoBehaviour
         catch (System.Exception e)
         {
             Debug.LogError($"Failed to parse theme name '{themeName}': {e.Message}");
-            return QuestionTheme.Instruments;
+            return QuestionTheme.instruments;
         }
-    }
-
-    private AudioClip LoadQuestionAudio(string audioPath)
-    {
-        if (string.IsNullOrEmpty(audioPath))
-        {
-            Debug.LogWarning("Audio path is empty");
-            return null;
-        }
-
-        var audioClip = Resources.Load<AudioClip>(audioPath);
-        if (audioClip == null)
-        {
-            Debug.LogError($"Failed to load audio clip at path: {audioPath}");
-        }
-        return audioClip;
     }
 }
