@@ -19,10 +19,3 @@ public class AnswerOption : MonoBehaviour
         answerButton.onClick.AddListener(() => onAnswer?.Invoke(transform.GetSiblingIndex()));
     }
 }
-
-[Serializable]
-internal class AnswerData
-{
-    public string answerText;
-    public Sprite sprite;
-}

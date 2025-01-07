@@ -9,21 +9,18 @@ public class GameSettingsSO : ScriptableObject
     public string soundSet = "instruments";
     public int timerDuration = 120;
     public int numberOfRounds = 5;
-    public int maxTeams = 20;
+    public readonly int maxTeams = 4;
+    public QuestionTheme questionTheme;
 
     [Header("Runtime Data")]
     public List<TeamData> currentTeams = new List<TeamData>();
     
-    [System.Serializable]
+    [Serializable]
     public class TeamData
     {
         public string teamName;
         public SpaceshipColor spaceshipColor;
-
-        internal SpaceshipColor GetSpaceshipColor()
-        {
-            throw new NotImplementedException();
-        }
+        public SpaceshipType spaceshipType;
     }
 
     public void UpdateTeams(List<TeamData> teams)

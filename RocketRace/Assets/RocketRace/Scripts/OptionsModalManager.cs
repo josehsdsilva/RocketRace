@@ -127,8 +127,9 @@ public class OptionsModalManager : MonoBehaviour
             {
                 if (i == j) continue;
                 
-                if (teamEntries[i].GetSpaceshipColor() == teamEntries[j].GetSpaceshipColor())
+                if (teamEntries[i].GetSpaceshipColor() == teamEntries[j].GetSpaceshipColor() && teamEntries[i].GetSpaceshipType() == teamEntries[j].GetSpaceshipType())
                 {
+                    // ToDo: add alert message
                     Debug.Log("Duplicate spaceship selected!");
                     return false;
                 }
@@ -153,10 +154,9 @@ public class OptionsModalManager : MonoBehaviour
     {
         switch (roundsDropdown.value)
         {
-            case 0: return 3;
+            case 0: return 4;
             case 1: return 5;
-            case 2: return 7;
-            case 3: return 10;
+            case 2: return 6;
             default: return 5;
         }
     }

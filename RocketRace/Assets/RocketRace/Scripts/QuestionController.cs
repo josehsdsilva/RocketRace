@@ -53,12 +53,3 @@ public class QuestionController : MonoBehaviour
     }
 
 }
-
-[Serializable]
-internal class QuestionData
-{
-    public AudioClip questionAudio;
-    public string questionText;
-    public List<AnswerData> answerOptions;
-    public int correctAnswerIndex;
-}

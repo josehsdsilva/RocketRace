@@ -15,9 +15,22 @@ MonoBehaviour:
   soundSet: instruments
   timerDuration: 120
   numberOfRounds: 5
-  maxTeams: 20
   currentTeams:
-  - teamName: equipa 1
+  - teamName: q
     spaceshipColor: 0
-  - teamName: equipa 2
+    spaceshipType: 0
+  - teamName: w
+    spaceshipColor: 1
+    spaceshipType: 0
+  - teamName: e
+    spaceshipColor: 3
+    spaceshipType: 0
+  - teamName: r
     spaceshipColor: 2
+    spaceshipType: 0
+  - teamName: t
+    spaceshipColor: 0
+    spaceshipType: 2
+  - teamName: u
+    spaceshipColor: 0
+    spaceshipType: 3

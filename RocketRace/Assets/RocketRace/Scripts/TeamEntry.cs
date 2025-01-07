@@ -8,7 +8,8 @@ using System.Linq;
 public class TeamEntry : MonoBehaviour
 {
     [SerializeField] private TMP_InputField teamNameInput;
-    [SerializeField] private TMP_Dropdown spaceshipDropdown;
+    [SerializeField] private TMP_Dropdown spaceshipTypeDropdown;
+    [SerializeField] private TMP_Dropdown spaceshipColorDropdown;
 
     private void Start()
     {
@@ -18,9 +19,11 @@ public class TeamEntry : MonoBehaviour
     private void InitializeDropdowns()
     {
         // Setup rocket options
-        spaceshipDropdown.ClearOptions();
-        
-        spaceshipDropdown.AddOptions(Enum.GetNames(typeof(SpaceshipColor)).ToList());
+        spaceshipTypeDropdown.ClearOptions();
+        spaceshipTypeDropdown.AddOptions(Enum.GetNames(typeof(SpaceshipType)).ToList());
+
+        spaceshipColorDropdown.ClearOptions();
+        spaceshipColorDropdown.AddOptions(Enum.GetNames(typeof(SpaceshipColor)).ToList());
     }
 
     public GameSettingsSO.TeamData GetTeamData()
@@ -28,26 +31,42 @@ public class TeamEntry : MonoBehaviour
         return new GameSettingsSO.TeamData
         {
             teamName = string.IsNullOrEmpty(teamNameInput.text) ? "Team" : teamNameInput.text,
-            spaceshipColor = (SpaceshipColor)spaceshipDropdown.value
+            spaceshipColor = (SpaceshipColor)spaceshipTypeDropdown.value,
+            spaceshipType = (SpaceshipType)spaceshipColorDropdown.value
         };
     }
 
     internal SpaceshipColor GetSpaceshipColor()
     {
-        return (SpaceshipColor)spaceshipDropdown.value;
+        return (SpaceshipColor)spaceshipColorDropdown.value;
+    }
+
+    internal SpaceshipType GetSpaceshipType()
+    {
+        return (SpaceshipType)spaceshipTypeDropdown.value;
     }
 }
 
+// lower case cause of font limitation
 public enum SpaceshipColor
 {
-    Black,
-    Cyan,
-    Orange,
-    Yellow,
-    Blue,
-    Grey,
-    Green,
-    Purple,
-    Red,
-    White
+    black,
+    cyan,
+    orange,
+    yellow,
+    blue,
+    grey,
+    green,
+    purple,
+    red,
+    white
+}
+
+// lower case cause of font limitation
+public enum SpaceshipType
+{
+    quad,
+    rocket,
+    shuttle,
+    starship
 }

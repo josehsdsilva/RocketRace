@@ -5,27 +5,38 @@ using UnityEngine;
 
 public class SpaceshipController : MonoBehaviour
 {
-    [Header("References")]
-    [SerializeField] private MeshRenderer spaceshipRenderer;
-
     [Header("Settings")]
-    [SerializeField] private List<SpaceshipData> spaceshipDatas;
+    [SerializeField] private List<SpaceshipColorData> spaceshipColorDatas;
+    [SerializeField] private List<SpaceshipTypeData> spaceshipTypeDatas;
     [SerializeField] private Vector3 onQuestionPosition;
 
     private Vector3 initialPosition;
+    private SpaceshipTypeData currentSpaceshipType;
 
     private void Awake()
     {
         initialPosition = transform.position;
     }
 
-    internal void SetSpaceshipColor(SpaceshipColor spaceshipColor)
+    internal void SetSpaceshipAndColor(SpaceshipType spaceshipType, SpaceshipColor spaceshipColor)
     {
-        spaceshipRenderer.material = spaceshipDatas.Find(x => x.spaceshipColor == spaceshipColor).material;
+        ToggleAllSpaceships(false);
+        currentSpaceshipType = spaceshipTypeDatas.Find(x => x.spaceshipType == spaceshipType);
+        currentSpaceshipType.spaceshipObject.SetActive(true);
+        currentSpaceshipType.spaceshipRenderer.material = spaceshipColorDatas.Find(x => x.spaceshipColor == spaceshipColor).material;
     }
 
-    internal void SetOnQuestion()
+    private void ToggleAllSpaceships(bool active)
     {
+        foreach (var spaceshipTypeData in spaceshipTypeDatas)
+        {
+            spaceshipTypeData.spaceshipObject.SetActive(active);
+        }
+    }
+
+    internal void SetOnQuestion(SpaceshipType spaceshipType, SpaceshipColor spaceshipColor)
+    {
+        SetSpaceshipAndColor(spaceshipType, spaceshipColor);
         transform.position = onQuestionPosition;
     }
 
@@ -36,9 +47,17 @@ public class SpaceshipController : MonoBehaviour
 }
 
 [Serializable]
-public class SpaceshipData
+public class SpaceshipColorData
 {
     public SpaceshipColor spaceshipColor;
     public Material material;
 
+}
+
+[Serializable]
+public class SpaceshipTypeData
+{
+    public SpaceshipType spaceshipType;
+    public GameObject spaceshipObject;
+    public MeshRenderer spaceshipRenderer;
 }
