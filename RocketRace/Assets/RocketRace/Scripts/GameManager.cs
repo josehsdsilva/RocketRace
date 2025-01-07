@@ -85,7 +85,6 @@ public class GameManager : MonoBehaviour
     {
         // Get the current team
         currentTeam = gameSettings.currentTeams[currentTeamIndex];
-        questionTheme = gameSettings.questionTheme;
 
         spaceshipController.SetOnQuestion(currentTeam.spaceshipType, currentTeam.spaceshipColor);
         questionController.SetQuestionData(questionData[currentTeamIndex + currentRound *  gameSettings.currentTeams.Count], currentRound, gameSettings.numberOfRounds, currentTeam.teamName);

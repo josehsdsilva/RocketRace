@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System;
+using System.Linq;
 
 [Serializable]
 public class JSONAnswerOption
@@ -57,24 +58,30 @@ public class AudioLoader : CustomYieldInstruction
         #endif
         
         www = UnityWebRequestMultimedia.GetAudioClip(fullPath, AudioType.WAV);
-        www.SendWebRequest().completed += _ => OnRequestComplete(audioPath + ".wav");
+        www.SendWebRequest().completed += _ => OnRequestComplete(GetAudioFileName(audioPath));
     }
 
-    private void OnRequestComplete(string audioPath)
+    private void OnRequestComplete(string audioName)
     {
         if (www.result == UnityWebRequest.Result.Success)
         {
             Clip = DownloadHandlerAudioClip.GetContent(www);
+            Clip.name = audioName;
         }
         else
         {
             Error = www.error;
-            Debug.LogError($"Failed to load audio clip {audioPath}. Error: {Error}");
+            Debug.LogError($"Failed to load audio clip {audioName}. Error: {Error}");
         }
         isDone = true;
         www?.Dispose();
     }
+    string GetAudioFileName(string fullPath)
+    {
+        return fullPath.Split('/').Last();
+    }
 }
+
 
 public class QuestionDataLoader : MonoBehaviour
 {
@@ -194,7 +201,8 @@ public class QuestionDataLoader : MonoBehaviour
             {
                 questionText = jsonQuestion.questionText,
                 questionAudio = audioLoader.Clip,
-                answerOptions = CreateAnswerOptions(jsonQuestion.answerOptions, jsonQuestion.correctAnswerIndex)
+                answerOptions = CreateAnswerOptions(jsonQuestion.answerOptions, jsonQuestion.correctAnswerIndex),
+                correctAnswerIndex = jsonQuestion.correctAnswerIndex
             };
         
             result.Add(questionData);

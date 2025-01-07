@@ -12,6 +12,10 @@ public class QuestionController : MonoBehaviour
     [SerializeField] private TMP_Text currentRoundText;
     [SerializeField] private AnswerOption answerOptionPrefab;
     [SerializeField] private Transform answerOptionsParent;
+    [SerializeField] private AudioSource audioSource;
+    
+    [Header("Data")]
+    [SerializeField] private GameSettingsSO gameSettings;
 
     private QuestionData currentQuestionData;
 
@@ -28,11 +32,14 @@ public class QuestionController : MonoBehaviour
         foreach (AnswerData answerData in questionData.answerOptions)
         {
             AnswerOption answerOption = Instantiate(answerOptionPrefab, answerOptionsParent);
-            answerOption.SetAnswerOption(answerData, OnAnswer);
+            answerOption.SetAnswerOption(answerData, OnAnswerClick);
         }
+
+        audioSource.clip = questionData.questionAudio;
+        audioSource.Play();
     }
 
-    private void OnAnswer(int answerIndex)
+    private void OnAnswerClick(int answerIndex)
     {
         if(currentQuestionData.correctAnswerIndex == answerIndex)
         {

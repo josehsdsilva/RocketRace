@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
 using System;
+using System.Linq;
 
 public class OptionsModalManager : MonoBehaviour
 {
@@ -34,7 +35,7 @@ public class OptionsModalManager : MonoBehaviour
     {
         // Initialize Sound Set Dropdown
         soundSetDropdown.ClearOptions();
-        soundSetDropdown.AddOptions(new List<string> { "instruments", "chords" });
+        soundSetDropdown.AddOptions(Enum.GetNames(typeof(QuestionTheme)).ToList());
 
         // Initialize Timer Dropdown
         timerDropdown.ClearOptions();
@@ -43,7 +44,7 @@ public class OptionsModalManager : MonoBehaviour
 
         // Initialize Rounds Dropdown
         roundsDropdown.ClearOptions();
-        roundsDropdown.AddOptions(new List<string> { "3 rounds", "5 rounds (Default)", "7 rounds", "10 rounds" });
+        roundsDropdown.AddOptions(new List<string> { "4 rounds", "5 rounds (Default)", "6 rounds" });
         roundsDropdown.value = 1; // Default to 5 rounds
 
         removeTeamButton.interactable = false;
@@ -103,7 +104,7 @@ public class OptionsModalManager : MonoBehaviour
         if(!CanStartGame()) return;
         
         // Update settings before loading new scene
-        gameSettings.soundSet = soundSetDropdown.options[soundSetDropdown.value].text;
+        gameSettings.soundSet = soundSetDropdown.value;
         gameSettings.timerDuration = GetTimerDuration();
         gameSettings.numberOfRounds = GetNumberOfRounds();
         
