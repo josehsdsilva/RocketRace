@@ -1,0 +1,1409 @@
+{
+    "themes": [
+        {
+            "theme": "instruments",
+            "questions": [
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/_130_woodwind_flute_sensualizando_Dmin",
+                    "answerOptions": [
+                        {
+                            "answerText": "clarinet",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "flute",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "oboe",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "bassoon",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/ACCORDIAN_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "organ",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "synthesizer",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "accordion",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "electric piano",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 2
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/AHA_BS_80_trumpet_stack_loop_postman_Bm",
+                    "answerOptions": [
+                        {
+                            "answerText": "trumpet",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "trombone",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "brass",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "tuba",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 0
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/AHA_CC_80_trumpet_stack_loop_wrong_turn_A#m",
+                    "answerOptions": [
+                        {
+                            "answerText": "brass",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "trumpet",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "trombone",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "tuba",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/AR_BNS_140_bansuri_processed_tantra_G#min",
+                    "answerOptions": [
+                        {
+                            "answerText": "clarinet",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "bansuri",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "flute",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "oboe",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/BASSOON_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "oboe",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "clarinet",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "bassoon",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "flute",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 2
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/BRASS 1_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "trumpet",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "brass",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "trombone",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "tuba",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/CELLO_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "viola",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "violin",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "double bass",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "cello",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 3
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/CLARINET_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "clarinet",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "oboe",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "bassoon",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "saxophone",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 0
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/Conga 2",
+                    "answerOptions": [
+                        {
+                            "answerText": "synthesizer",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "drum kit",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "conga",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "snare",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 2
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/Conga",
+                    "answerOptions": [
+                        {
+                            "answerText": "drum kit",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "conga",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "snare",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "kick drum",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/CPA_LRH_115_organ_church_pew_Am",
+                    "answerOptions": [
+                        {
+                            "answerText": "piano",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "organ",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "accordion",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "harpsichord",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/CYMBAL_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "cymbal",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "hi-hat",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "triangle",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "snare",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 0
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/DOUBLE BASS_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "cello",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "electric guitar",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "double bass",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "viola",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 2
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/Drum Kit ",
+                    "answerOptions": [
+                        {
+                            "answerText": "conga",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "drum kit",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "snare",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "cymbal",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/Electric piano",
+                    "answerOptions": [
+                        {
+                            "answerText": "synthesizer",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "organ",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "piano",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "electric piano",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 3
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/Eletric guitar",
+                    "answerOptions": [
+                        {
+                            "answerText": "electric guitar",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "classical guitar",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "synthesizer",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "electric piano",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 0
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/GIO_CGTR_80_classical_guitar_riff_kurd_moving_Dmin",
+                    "answerOptions": [
+                        {
+                            "answerText": "electric guitar",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "classical guitar",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "violin",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "cello",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/HARPSICHORD_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "piano",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "electric piano",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "harpsichord",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "organ",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 2
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/HAT_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "cymbal",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "hi-hat",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "triangle",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "snare",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/jc_evt_90_narrow_streets_loop_guitar_1_Amin",
+                    "answerOptions": [
+                        {
+                            "answerText": "electric guitar",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "classical guitar",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "synthesizer",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "electric piano",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 0
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/KICK_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "snare",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "kick drum",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "drum kit",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "conga",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/KLAVÍR 1_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "piano",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "harpsichord",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "electric piano",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "organ",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 0
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/KLAVÍR 2_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "harpsichord",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "piano",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "electric piano",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "organ",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/KYTARA 1_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "electric guitar",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "violin",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "classical guitar",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "viola",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 2
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/KYTARA 2_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "classical guitar",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "electric guitar",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "violin",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "cello",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 0
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/MNT_MW_oboe_exhausted_Am",
+                    "answerOptions": [
+                        {
+                            "answerText": "flute",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "oboe",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "bassoon",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "clarinet",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/MNT_MW_oboe_needy_Am",
+                    "answerOptions": [
+                        {
+                            "answerText": "clarinet",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "flute",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "oboe",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "bassoon",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 2
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/MNT_MW_oboe_rhapsodic_Em",
+                    "answerOptions": [
+                        {
+                            "answerText": "bassoon",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "oboe",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "flute",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "clarinet",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/SAX 1_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "clarinet",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "saxophone",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "trumpet",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "oboe",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/SAX 2_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "trumpet",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "clarinet",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "saxophone",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "brass",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 2
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/SD_TSS_128_organ_church_chords_hits_holds_gospel_Ebmin",
+                    "answerOptions": [
+                        {
+                            "answerText": "electric piano",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "organ",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "accordion",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "harpsichord",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/SNARE_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "snare",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "drum kit",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "kick drum",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "cymbal",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 0
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/SOULSURPLUS_reverence_melodic_loop_08_organ_chords_church_110bpm_Ebmaj",
+                    "answerOptions": [
+                        {
+                            "answerText": "harpsichord",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "electric piano",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "organ",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "accordion",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 2
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/SYNTH 02_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "electric piano",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "synthesizer",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "organ",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "accordion",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/SYNTHS 1_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "electric piano",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "organ",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "piano",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "synthesizer",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 3
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/TRIANGLE_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "triangle",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "cymbal",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "hi-hat",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "snare",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 0
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/Trombone 1",
+                    "answerOptions": [
+                        {
+                            "answerText": "trumpet",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "brass",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "trombone",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "tuba",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 2
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/Trombone 2",
+                    "answerOptions": [
+                        {
+                            "answerText": "tuba",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "trombone",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "trumpet",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "brass",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/TUBA_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "brass",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "tuba",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "trombone",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "trumpet",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/VIOLA_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "violin",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "cello",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "viola",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "double bass",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 2
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/Violin 1",
+                    "answerOptions": [
+                        {
+                            "answerText": "viola",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "violin",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "cello",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "double bass",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/VIOLIN 1_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "cello",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "double bass",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "violin",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "viola",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 2
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/Violin 2",
+                    "answerOptions": [
+                        {
+                            "answerText": "violin",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "viola",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "cello",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "double bass",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 0
+                },
+                {
+                    "questionText": "Which instrument is playing?",
+                    "questionAudio": "Audio/Instruments/VIOLIN 2_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "viola",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "cello",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "double bass",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "violin",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 3
+                }
+            ]
+        },
+        {
+            "theme": "chords",
+            "questions": [
+                {
+                    "questionText": "what chord is playing?",
+                    "questionAudio": "Audio/Chords/A MAJOR_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "a major",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "a minor",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 0
+                },
+                {
+                    "questionText": "what chord is playing?",
+                    "questionAudio": "Audio/Chords/A MINOR_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "a major",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "a minor",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "questionText": "what chord is playing?",
+                    "questionAudio": "Audio/Chords/A SHARP MAJOR_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "a sharp major",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "a sharp minor",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 0
+                },
+                {
+                    "questionText": "what chord is playing?",
+                    "questionAudio": "Audio/Chords/A SHARP MINOR_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "a sharp minor",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "a sharp major",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 0
+                },
+                {
+                    "questionText": "what chord is playing?",
+                    "questionAudio": "Audio/Chords/B MAJOR_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "b minor",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "b major",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "questionText": "what chord is playing?",
+                    "questionAudio": "Audio/Chords/B MINOR_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "b minor",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "b major",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 0
+                },
+                {
+                    "questionText": "what chord is playing?",
+                    "questionAudio": "Audio/Chords/C MAJOR_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "c major",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "c minor",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 0
+                },
+                {
+                    "questionText": "what chord is playing?",
+                    "questionAudio": "Audio/Chords/C MINOR_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "c minor",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "c major",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 0
+                },
+                {
+                    "questionText": "what chord is playing?",
+                    "questionAudio": "Audio/Chords/C SHARP MAJOR_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "c sharp minor",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "c sharp major",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "questionText": "what chord is playing?",
+                    "questionAudio": "Audio/Chords/C SHARP MINOR_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "c sharp minor",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "c sharp major",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 0
+                },
+                {
+                    "questionText": "what chord is playing?",
+                    "questionAudio": "Audio/Chords/D MAJOR_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "d minor",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "d major",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "questionText": "what chord is playing?",
+                    "questionAudio": "Audio/Chords/D MINOR_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "d major",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "d minor",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "questionText": "what chord is playing?",
+                    "questionAudio": "Audio/Chords/D SHARP MAJOR_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "d sharp major",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "d sharp minor",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 0
+                },
+                {
+                    "questionText": "what chord is playing?",
+                    "questionAudio": "Audio/Chords/D SHARP MINOR_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "d sharp minor",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "d sharp major",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 0
+                },
+                {
+                    "questionText": "what chord is playing?",
+                    "questionAudio": "Audio/Chords/E MAJOR_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "e minor",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "e major",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "questionText": "what chord is playing?",
+                    "questionAudio": "Audio/Chords/E MINOR_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "e minor",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "e major",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 0
+                },
+                {
+                    "questionText": "what chord is playing?",
+                    "questionAudio": "Audio/Chords/F MAJOR_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "f major",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "f minor",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 0
+                },
+                {
+                    "questionText": "what chord is playing?",
+                    "questionAudio": "Audio/Chords/F MINOR_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "f minor",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "f major",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 0
+                },
+                {
+                    "questionText": "what chord is playing?",
+                    "questionAudio": "Audio/Chords/F SHARP MAJOR_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "f sharp minor",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "f sharp major",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "questionText": "what chord is playing?",
+                    "questionAudio": "Audio/Chords/F SHARP MINOR_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "f sharp minor",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "f sharp major",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 0
+                },
+                {
+                    "questionText": "what chord is playing?",
+                    "questionAudio": "Audio/Chords/G MAJOR_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "g major",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "g minor",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 0
+                },
+                {
+                    "questionText": "what chord is playing?",
+                    "questionAudio": "Audio/Chords/G MINOR_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "g major",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "g minor",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 1
+                },
+                {
+                    "questionText": "what chord is playing?",
+                    "questionAudio": "Audio/Chords/G SHARP MAJOR_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "g sharp major",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "g minor",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 0
+                },
+                {
+                    "questionText": "what chord is playing?",
+                    "questionAudio": "Audio/Chords/G SHARP MINOR_1",
+                    "answerOptions": [
+                        {
+                            "answerText": "g sharp major",
+                            "spritePath": ""
+                        },
+                        {
+                            "answerText": "g sharp minor",
+                            "spritePath": ""
+                        }
+                    ],
+                    "correctAnswerIndex": 1
+                }
+            ]
+        }
+    ]
+}
