@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private NotificationController notificationController;
     [SerializeField] private TeamScoresController teamScoresController;
     [SerializeField] private WinnersDisplayController winnersDisplayController;
+    [SerializeField] private SpaceshipProjectorsController spaceshipProjectorsController;
     [SerializeField] private GameObject gameUI;
 
     private int currentRound = 0;
@@ -79,19 +80,23 @@ public class GameManager : MonoBehaviour
         // Get the current team
         currentTeam = gameSettings.currentTeams[currentTeamIndex];
         currentQuestionData = questionData[currentTeamIndex + currentRound *  gameSettings.currentTeams.Count];
-        questionController.SetQuestionData(currentQuestionData, currentRound, currentTeamIndex, currentTeam.teamName, OnPlayAnswered);
+        questionController.SetQuestionData(currentQuestionData, currentRound, OnPlayAnswered);
+        teamScoresController.HighlightCurrentTeam(currentTeamIndex);
+        HideAllSpaceshipTrails();
+    }
 
-        // Increment the team index
-        currentTeamIndex++;
-        if (currentTeamIndex >= gameSettings.currentTeams.Count)
+    private void HideAllSpaceshipTrails()
+    {
+        for (int i = 0; i < gameSettings.currentTeams.Count; i++)
         {
-            currentTeamIndex = 0;
-            currentRound++;
+            spaceshipProjectorsController.ResetParticleEffects(i);
         }
     }
 
     private void OnPlayAnswered(bool isCorrect)
     {
+        spaceshipProjectorsController.OnAnswer(currentTeamIndex, isCorrect);
+
         if (isCorrect)
         {
             notificationController.ShowNotification("Correct Answer!", "Well done!", OnNotificationClosed);
@@ -106,6 +111,17 @@ public class GameManager : MonoBehaviour
 
     private void OnNotificationClosed()
     {
+        spaceshipProjectorsController.ResetParticleEffects(currentTeamIndex);
+
+
+        // Increment the team index
+        currentTeamIndex++;
+        if (currentTeamIndex >= gameSettings.currentTeams.Count)
+        {
+            currentTeamIndex = 0;
+            currentRound++;
+        }
+
         if (currentRound >= gameSettings.numberOfRounds)
         {
             notificationController.ShowNotification("Game ended", "Let's see who won", ShowWinners);

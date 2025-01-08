@@ -12,6 +12,7 @@ public class TeamScoresController : MonoBehaviour
     [SerializeField] private GameSettingsSO gameSettings;
 
     private List<TeamScore> teamScores = new List<TeamScore>();
+    private int previousTeamIndex;
 
     internal void InitializeScores()
     {
@@ -26,6 +27,13 @@ public class TeamScoresController : MonoBehaviour
     internal void UpdateTeamScore(int currentTeamIndex, bool isCorrect)
     {
         teamScores[currentTeamIndex].AddScore(isCorrect);
+    }
+
+    internal void HighlightCurrentTeam(int currentTeamIndex)
+    {
+        teamScores[previousTeamIndex].ToggleHighlight(false);
+        previousTeamIndex = currentTeamIndex;
+        teamScores[currentTeamIndex].ToggleHighlight(true);
     }
 
     internal List<TeamScore> GetWinners()

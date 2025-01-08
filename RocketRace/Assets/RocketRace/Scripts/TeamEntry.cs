@@ -11,6 +11,10 @@ public class TeamEntry : MonoBehaviour
     [SerializeField] private TMP_Dropdown spaceshipTypeDropdown;
     [SerializeField] private TMP_Dropdown spaceshipColorDropdown;
 
+    internal SpaceshipType SpaceshipType => (SpaceshipType)spaceshipTypeDropdown.value;
+    internal SpaceshipColor SpaceshipColor => (SpaceshipColor)spaceshipColorDropdown.value;
+    internal string TeamName => teamNameInput.text;
+
     private void Start()
     {
         InitializeDropdowns();
@@ -34,16 +38,6 @@ public class TeamEntry : MonoBehaviour
             spaceshipColor = (SpaceshipColor)spaceshipTypeDropdown.value,
             spaceshipType = (SpaceshipType)spaceshipColorDropdown.value
         };
-    }
-
-    internal SpaceshipColor GetSpaceshipColor()
-    {
-        return (SpaceshipColor)spaceshipColorDropdown.value;
-    }
-
-    internal SpaceshipType GetSpaceshipType()
-    {
-        return (SpaceshipType)spaceshipTypeDropdown.value;
     }
 }
 

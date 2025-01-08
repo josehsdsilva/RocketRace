@@ -32,4 +32,16 @@ public class SpaceshipProjectorsController : MonoBehaviour
             spaceshipProjectors[i].SetSpaceshipAndColor(teamEntries[i].spaceshipType, teamEntries[i].spaceshipColor, i);
         }
     }
+
+    internal void OnAnswer(int currentTeamIndex, bool correct)
+    {
+        Debug.Log(currentTeamIndex);
+        Debug.Log((int)teamEntries[currentTeamIndex].spaceshipType);
+        spaceshipProjectors[currentTeamIndex].OnAnswer((int)teamEntries[currentTeamIndex].spaceshipType, correct);
+    }
+
+    internal void ResetParticleEffects(int playerID)
+    {
+        spaceshipProjectors[playerID].ResetParticleEffects();
+    }
 }

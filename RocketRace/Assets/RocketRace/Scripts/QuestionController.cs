@@ -9,14 +9,11 @@ public class QuestionController : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private TMP_Text questionText;
-    [SerializeField] private TMP_Text currentTeamText;
     [SerializeField] private TMP_Text currentRoundText;
     [SerializeField] private TMP_Text timerText;
-    [SerializeField] private RawImage spaceshipRender;
     [SerializeField] private AnswerOption answerOptionPrefab;
     [SerializeField] private Transform answerOptionsParent;
     [SerializeField] private AudioSource audioSource;
-    [SerializeField] private List<RenderTexture> renderTextures;
 
     [Header("Settings")]
     [SerializeField] private AudioClip correctSound;
@@ -45,20 +42,17 @@ public class QuestionController : MonoBehaviour
         }
     }
 
-    internal void SetQuestionData(QuestionData questionData, int currentRound, int currentTeamIndex, string currentTeamName, Action<bool> onAnswered)
+    internal void SetQuestionData(QuestionData questionData, int currentRound, Action<bool> onAnswered)
     {
         this.onAnswered = onAnswered;
         currentQuestionData = questionData;
 
         currentRoundText.text = $"Round: {currentRound + 1} / {gameSettings.numberOfRounds}";
-        currentTeamText.text = $"Team: {currentTeamName}";
 
         questionText.text = questionData.questionText;
 
         answering = true;
         timer = gameSettings.timerDuration;
-
-        spaceshipRender.texture = renderTextures[currentTeamIndex];
 
         for (int i = 0; i < questionData.answerOptions.Count; i++)
         {

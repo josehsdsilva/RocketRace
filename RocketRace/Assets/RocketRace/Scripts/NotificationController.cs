@@ -21,7 +21,7 @@ public class NotificationController : MonoBehaviour
         notificationPanel.SetActive(false);
     }
 
-    internal void ShowNotification(string title, string notification, Action onClose)
+    internal void ShowNotification(string title, string notification, Action onClose = null)
     {
         this.onClose = onClose;
         titleText.text = title.ToLower();

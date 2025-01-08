@@ -8,7 +8,7 @@ public class WinnersDisplayController : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private GameObject winnersUI;
-    [SerializeField] private WinnerTeam winnerTeamPrefab;
+    [SerializeField] private TeamScore winnerTeamPrefab;
     [SerializeField] private Transform winnersHolder;
     [SerializeField] private Button mainMenuButton;
     [SerializeField] private AudioSource audioSource;
@@ -29,8 +29,9 @@ public class WinnersDisplayController : MonoBehaviour
         winnersUI.SetActive(true);
         for (int i = 0; i < winners.Count; i++)
         {
-            WinnerTeam winnerTeam = Instantiate(winnerTeamPrefab, winnersHolder);
-            winnerTeam.SetTeam(winners[i].TeamName, winners[i].TeamID);
+            TeamScore winnerTeam = Instantiate(winnerTeamPrefab, winnersHolder);
+            winnerTeam.SetTeamScore(winners[i].TeamName, winners[i].Score, winners[i].TeamID);
+            winnerTeam.ToggleHighlight(true);
         }
         audioSource.Play();
     }

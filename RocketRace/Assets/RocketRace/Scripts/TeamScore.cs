@@ -12,6 +12,7 @@ public class TeamScore : MonoBehaviour
     [SerializeField] private TMP_Text teamNameText;
     [SerializeField] private TMP_Text scoreText;
     [SerializeField] private RawImage spaceshipRender;
+    [SerializeField] private GameObject highlight;
     [SerializeField] private List<RenderTexture> spaceshipDisplayers;
 
     private int score;
@@ -20,6 +21,11 @@ public class TeamScore : MonoBehaviour
     internal string TeamName => teamName;
     private int teamID;
     internal int TeamID => teamID;
+
+    private void Awake()
+    {
+        ToggleHighlight(false);
+    }
 
     internal void AddScore(bool isCorrect)
     {
@@ -34,5 +40,10 @@ public class TeamScore : MonoBehaviour
         teamNameText.text = teamName;
         scoreText.text = score.ToString();
         spaceshipRender.texture = spaceshipDisplayers[teamID];
+    }
+
+    internal void ToggleHighlight(bool active)
+    {
+        highlight.SetActive(active);
     }
 }

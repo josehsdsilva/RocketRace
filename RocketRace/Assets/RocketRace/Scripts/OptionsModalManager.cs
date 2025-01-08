@@ -21,6 +21,7 @@ public class OptionsModalManager : MonoBehaviour
     [SerializeField] private TMP_Dropdown soundSetDropdown;
     [SerializeField] private Transform teamListContent;
     [SerializeField] private GameObject teamEntryPrefab;
+    [SerializeField] private NotificationController notificationController;
 
     private List<TeamEntry> teamEntries = new List<TeamEntry>();
 
@@ -110,7 +111,7 @@ public class OptionsModalManager : MonoBehaviour
         
         // Update teams
         var teamDataList = new List<GameSettingsSO.TeamData>();
-        foreach (var entry in teamEntries)
+        foreach (TeamEntry entry in teamEntries)
         {
             teamDataList.Add(entry.GetTeamData());
         }
@@ -126,12 +127,17 @@ public class OptionsModalManager : MonoBehaviour
         {
             for (int j = 0; j < teamEntries.Count; j++)
             {
+                if(string.IsNullOrEmpty(teamEntries[i].TeamName))
+                {
+                    notificationController.ShowNotification("Empty name", "Make sure that all teams have an assigned name");
+                    return false;
+                }
+
                 if (i == j) continue;
                 
-                if (teamEntries[i].GetSpaceshipColor() == teamEntries[j].GetSpaceshipColor() && teamEntries[i].GetSpaceshipType() == teamEntries[j].GetSpaceshipType())
+                if (teamEntries[i].SpaceshipColor == teamEntries[j].SpaceshipColor && teamEntries[i].SpaceshipType == teamEntries[j].SpaceshipType)
                 {
-                    // ToDo: add alert message
-                    Debug.Log("Duplicate spaceship selected!");
+                    notificationController.ShowNotification("Duplicate spaceships", "Make sure all teams have different spaceships types or colors!");
                     return false;
                 }
             }
