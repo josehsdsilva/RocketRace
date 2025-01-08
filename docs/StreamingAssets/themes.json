@@ -9,19 +9,19 @@
                     "answerOptions": [
                         {
                             "answerText": "clarinet",
-                            "spritePath": ""
+                            "spritePath": "Images/Clarinet"
                         },
                         {
                             "answerText": "flute",
-                            "spritePath": ""
+                            "spritePath": "Images/Flute"
                         },
                         {
                             "answerText": "oboe",
-                            "spritePath": ""
+                            "spritePath": "Images/Oboe"
                         },
                         {
                             "answerText": "bassoon",
-                            "spritePath": ""
+                            "spritePath": "Images/Bassoon"
                         }
                     ],
                     "correctAnswerIndex": 1
@@ -32,19 +32,19 @@
                     "answerOptions": [
                         {
                             "answerText": "organ",
-                            "spritePath": ""
+                            "spritePath": "Images/Organ"
                         },
                         {
                             "answerText": "synthesizer",
-                            "spritePath": ""
+                            "spritePath": "Images/Synthesizer"
                         },
                         {
                             "answerText": "accordion",
-                            "spritePath": ""
+                            "spritePath": "Images/accordion"
                         },
                         {
                             "answerText": "electric piano",
-                            "spritePath": ""
+                            "spritePath": "Images/Electric Piano"
                         }
                     ],
                     "correctAnswerIndex": 2
@@ -55,19 +55,19 @@
                     "answerOptions": [
                         {
                             "answerText": "trumpet",
-                            "spritePath": ""
+                            "spritePath": "Images/Trumpet"
                         },
                         {
                             "answerText": "trombone",
-                            "spritePath": ""
+                            "spritePath": "Images/Trombone"
                         },
                         {
                             "answerText": "brass",
-                            "spritePath": ""
+                            "spritePath": "Images/Brass"
                         },
                         {
                             "answerText": "tuba",
-                            "spritePath": ""
+                            "spritePath": "Images/Tuba"
                         }
                     ],
                     "correctAnswerIndex": 0
@@ -78,19 +78,19 @@
                     "answerOptions": [
                         {
                             "answerText": "brass",
-                            "spritePath": ""
+                            "spritePath": "Images/Brass"
                         },
                         {
                             "answerText": "trumpet",
-                            "spritePath": ""
+                            "spritePath": "Images/Trumpet"
                         },
                         {
                             "answerText": "trombone",
-                            "spritePath": ""
+                            "spritePath": "Images/Trombone"
                         },
                         {
                             "answerText": "tuba",
-                            "spritePath": ""
+                            "spritePath": "Images/Tuba"
                         }
                     ],
                     "correctAnswerIndex": 1
@@ -101,19 +101,19 @@
                     "answerOptions": [
                         {
                             "answerText": "clarinet",
-                            "spritePath": ""
+                            "spritePath": "Images/Clarinet"
                         },
                         {
                             "answerText": "bansuri",
-                            "spritePath": ""
+                            "spritePath": "Images/bansuri"
                         },
                         {
                             "answerText": "flute",
-                            "spritePath": ""
+                            "spritePath": "Images/Flute"
                         },
                         {
                             "answerText": "oboe",
-                            "spritePath": ""
+                            "spritePath": "Images/Oboe"
                         }
                     ],
                     "correctAnswerIndex": 1
@@ -124,19 +124,19 @@
                     "answerOptions": [
                         {
                             "answerText": "oboe",
-                            "spritePath": ""
+                            "spritePath": "Images/Oboe"
                         },
                         {
                             "answerText": "clarinet",
-                            "spritePath": ""
+                            "spritePath": "Images/Clarinet"
                         },
                         {
                             "answerText": "bassoon",
-                            "spritePath": ""
+                            "spritePath": "Images/Bassoon"
                         },
                         {
                             "answerText": "flute",
-                            "spritePath": ""
+                            "spritePath": "Images/Flute"
                         }
                     ],
                     "correctAnswerIndex": 2
@@ -147,19 +147,19 @@
                     "answerOptions": [
                         {
                             "answerText": "trumpet",
-                            "spritePath": ""
+                            "spritePath": "Images/Trumpet"
                         },
                         {
                             "answerText": "brass",
-                            "spritePath": ""
+                            "spritePath": "Images/Brass"
                         },
                         {
                             "answerText": "trombone",
-                            "spritePath": ""
+                            "spritePath": "Images/Trombone"
                         },
                         {
                             "answerText": "tuba",
-                            "spritePath": ""
+                            "spritePath": "Images/Tuba"
                         }
                     ],
                     "correctAnswerIndex": 1
@@ -170,19 +170,19 @@
                     "answerOptions": [
                         {
                             "answerText": "viola",
-                            "spritePath": ""
+                            "spritePath": "Images/Viola"
                         },
                         {
                             "answerText": "violin",
-                            "spritePath": ""
+                            "spritePath": "Images/Violin"
                         },
                         {
                             "answerText": "double bass",
-                            "spritePath": ""
+                            "spritePath": "Images/Double Bass"
                         },
                         {
                             "answerText": "cello",
-                            "spritePath": ""
+                            "spritePath": "Images/Cello"
                         }
                     ],
                     "correctAnswerIndex": 3
@@ -193,19 +193,19 @@
                     "answerOptions": [
                         {
                             "answerText": "clarinet",
-                            "spritePath": ""
+                            "spritePath": "Images/Clarinet"
                         },
                         {
                             "answerText": "oboe",
-                            "spritePath": ""
+                            "spritePath": "Images/Oboe"
                         },
                         {
                             "answerText": "bassoon",
-                            "spritePath": ""
+                            "spritePath": "Images/Bassoon"
                         },
                         {
                             "answerText": "saxophone",
-                            "spritePath": ""
+                            "spritePath": "Images/Saxophone"
                         }
                     ],
                     "correctAnswerIndex": 0
@@ -216,19 +216,19 @@
                     "answerOptions": [
                         {
                             "answerText": "synthesizer",
-                            "spritePath": ""
+                            "spritePath": "Images/Synthesizer"
                         },
                         {
                             "answerText": "drum kit",
-                            "spritePath": ""
+                            "spritePath": "Images/Drum Kit"
                         },
                         {
                             "answerText": "conga",
-                            "spritePath": ""
+                            "spritePath": "Images/Conga"
                         },
                         {
                             "answerText": "snare",
-                            "spritePath": ""
+                            "spritePath": "Images/Snare"
                         }
                     ],
                     "correctAnswerIndex": 2
@@ -239,19 +239,19 @@
                     "answerOptions": [
                         {
                             "answerText": "drum kit",
-                            "spritePath": ""
+                            "spritePath": "Images/Drum Kit"
                         },
                         {
                             "answerText": "conga",
-                            "spritePath": ""
+                            "spritePath": "Images/Conga"
                         },
                         {
                             "answerText": "snare",
-                            "spritePath": ""
+                            "spritePath": "Images/Snare"
                         },
                         {
                             "answerText": "kick drum",
-                            "spritePath": ""
+                            "spritePath": "Images/Kick Drum"
                         }
                     ],
                     "correctAnswerIndex": 1
@@ -262,19 +262,19 @@
                     "answerOptions": [
                         {
                             "answerText": "piano",
-                            "spritePath": ""
+                            "spritePath": "Images/Piano"
                         },
                         {
                             "answerText": "organ",
-                            "spritePath": ""
+                            "spritePath": "Images/Organ"
                         },
                         {
                             "answerText": "accordion",
-                            "spritePath": ""
+                            "spritePath": "Images/accordion"
                         },
                         {
                             "answerText": "harpsichord",
-                            "spritePath": ""
+                            "spritePath": "Images/Harpsichord"
                         }
                     ],
                     "correctAnswerIndex": 1
@@ -285,19 +285,19 @@
                     "answerOptions": [
                         {
                             "answerText": "cymbal",
-                            "spritePath": ""
+                            "spritePath": "Images/Cymbal"
                         },
                         {
                             "answerText": "hi-hat",
-                            "spritePath": ""
+                            "spritePath": "Images/Hi-hat"
                         },
                         {
                             "answerText": "triangle",
-                            "spritePath": ""
+                            "spritePath": "Images/Triangle"
                         },
                         {
                             "answerText": "snare",
-                            "spritePath": ""
+                            "spritePath": "Images/Snare"
                         }
                     ],
                     "correctAnswerIndex": 0
@@ -308,19 +308,19 @@
                     "answerOptions": [
                         {
                             "answerText": "cello",
-                            "spritePath": ""
+                            "spritePath": "Images/Cello"
                         },
                         {
                             "answerText": "electric guitar",
-                            "spritePath": ""
+                            "spritePath": "Images/Electric Guitar"
                         },
                         {
                             "answerText": "double bass",
-                            "spritePath": ""
+                            "spritePath": "Images/Double Bass"
                         },
                         {
                             "answerText": "viola",
-                            "spritePath": ""
+                            "spritePath": "Images/Viola"
                         }
                     ],
                     "correctAnswerIndex": 2
@@ -331,19 +331,19 @@
                     "answerOptions": [
                         {
                             "answerText": "conga",
-                            "spritePath": ""
+                            "spritePath": "Images/Conga"
                         },
                         {
                             "answerText": "drum kit",
-                            "spritePath": ""
+                            "spritePath": "Images/Drum Kit"
                         },
                         {
                             "answerText": "snare",
-                            "spritePath": ""
+                            "spritePath": "Images/Snare"
                         },
                         {
                             "answerText": "cymbal",
-                            "spritePath": ""
+                            "spritePath": "Images/Cymbal"
                         }
                     ],
                     "correctAnswerIndex": 1
@@ -354,19 +354,19 @@
                     "answerOptions": [
                         {
                             "answerText": "synthesizer",
-                            "spritePath": ""
+                            "spritePath": "Images/Synthesizer"
                         },
                         {
                             "answerText": "organ",
-                            "spritePath": ""
+                            "spritePath": "Images/Organ"
                         },
                         {
                             "answerText": "piano",
-                            "spritePath": ""
+                            "spritePath": "Images/Piano"
                         },
                         {
                             "answerText": "electric piano",
-                            "spritePath": ""
+                            "spritePath": "Images/Electric Piano"
                         }
                     ],
                     "correctAnswerIndex": 3
@@ -377,19 +377,19 @@
                     "answerOptions": [
                         {
                             "answerText": "electric guitar",
-                            "spritePath": ""
+                            "spritePath": "Images/Electric Guitar"
                         },
                         {
                             "answerText": "classical guitar",
-                            "spritePath": ""
+                            "spritePath": "Images/Classical Guitar"
                         },
                         {
                             "answerText": "synthesizer",
-                            "spritePath": ""
+                            "spritePath": "Images/Synthesizer"
                         },
                         {
                             "answerText": "electric piano",
-                            "spritePath": ""
+                            "spritePath": "Images/Electric Piano"
                         }
                     ],
                     "correctAnswerIndex": 0
@@ -400,19 +400,19 @@
                     "answerOptions": [
                         {
                             "answerText": "electric guitar",
-                            "spritePath": ""
+                            "spritePath": "Images/Electric Guitar"
                         },
                         {
                             "answerText": "classical guitar",
-                            "spritePath": ""
+                            "spritePath": "Images/Classical Guitar"
                         },
                         {
                             "answerText": "violin",
-                            "spritePath": ""
+                            "spritePath": "Images/Violin"
                         },
                         {
                             "answerText": "cello",
-                            "spritePath": ""
+                            "spritePath": "Images/Cello"
                         }
                     ],
                     "correctAnswerIndex": 1
@@ -423,19 +423,19 @@
                     "answerOptions": [
                         {
                             "answerText": "piano",
-                            "spritePath": ""
+                            "spritePath": "Images/Piano"
                         },
                         {
                             "answerText": "electric piano",
-                            "spritePath": ""
+                            "spritePath": "Images/Electric Piano"
                         },
                         {
                             "answerText": "harpsichord",
-                            "spritePath": ""
+                            "spritePath": "Images/Harpsichord"
                         },
                         {
                             "answerText": "organ",
-                            "spritePath": ""
+                            "spritePath": "Images/Organ"
                         }
                     ],
                     "correctAnswerIndex": 2
@@ -446,19 +446,19 @@
                     "answerOptions": [
                         {
                             "answerText": "cymbal",
-                            "spritePath": ""
+                            "spritePath": "Images/Cymbal"
                         },
                         {
                             "answerText": "hi-hat",
-                            "spritePath": ""
+                            "spritePath": "Images/Hi-hat"
                         },
                         {
                             "answerText": "triangle",
-                            "spritePath": ""
+                            "spritePath": "Images/Triangle"
                         },
                         {
                             "answerText": "snare",
-                            "spritePath": ""
+                            "spritePath": "Images/Snare"
                         }
                     ],
                     "correctAnswerIndex": 1
@@ -469,19 +469,19 @@
                     "answerOptions": [
                         {
                             "answerText": "electric guitar",
-                            "spritePath": ""
+                            "spritePath": "Images/Electric Guitar"
                         },
                         {
                             "answerText": "classical guitar",
-                            "spritePath": ""
+                            "spritePath": "Images/Classical Guitar"
                         },
                         {
                             "answerText": "synthesizer",
-                            "spritePath": ""
+                            "spritePath": "Images/Synthesizer"
                         },
                         {
                             "answerText": "electric piano",
-                            "spritePath": ""
+                            "spritePath": "Images/Electric Piano"
                         }
                     ],
                     "correctAnswerIndex": 0
@@ -492,19 +492,19 @@
                     "answerOptions": [
                         {
                             "answerText": "snare",
-                            "spritePath": ""
+                            "spritePath": "Images/Snare"
                         },
                         {
                             "answerText": "kick drum",
-                            "spritePath": ""
+                            "spritePath": "Images/Kick Drum"
                         },
                         {
                             "answerText": "drum kit",
-                            "spritePath": ""
+                            "spritePath": "Images/Drum Kit"
                         },
                         {
                             "answerText": "conga",
-                            "spritePath": ""
+                            "spritePath": "Images/Conga"
                         }
                     ],
                     "correctAnswerIndex": 1
@@ -515,19 +515,19 @@
                     "answerOptions": [
                         {
                             "answerText": "piano",
-                            "spritePath": ""
+                            "spritePath": "Images/Piano"
                         },
                         {
                             "answerText": "harpsichord",
-                            "spritePath": ""
+                            "spritePath": "Images/Harpsichord"
                         },
                         {
                             "answerText": "electric piano",
-                            "spritePath": ""
+                            "spritePath": "Images/Electric Piano"
                         },
                         {
                             "answerText": "organ",
-                            "spritePath": ""
+                            "spritePath": "Images/Organ"
                         }
                     ],
                     "correctAnswerIndex": 0
@@ -538,19 +538,19 @@
                     "answerOptions": [
                         {
                             "answerText": "harpsichord",
-                            "spritePath": ""
+                            "spritePath": "Images/Harpsichord"
                         },
                         {
                             "answerText": "piano",
-                            "spritePath": ""
+                            "spritePath": "Images/Piano"
                         },
                         {
                             "answerText": "electric piano",
-                            "spritePath": ""
+                            "spritePath": "Images/Electric Piano"
                         },
                         {
                             "answerText": "organ",
-                            "spritePath": ""
+                            "spritePath": "Images/Organ"
                         }
                     ],
                     "correctAnswerIndex": 1
@@ -561,19 +561,19 @@
                     "answerOptions": [
                         {
                             "answerText": "electric guitar",
-                            "spritePath": ""
+                            "spritePath": "Images/Electric Guitar"
                         },
                         {
                             "answerText": "violin",
-                            "spritePath": ""
+                            "spritePath": "Images/Violin"
                         },
                         {
                             "answerText": "classical guitar",
-                            "spritePath": ""
+                            "spritePath": "Images/Classical Guitar"
                         },
                         {
                             "answerText": "viola",
-                            "spritePath": ""
+                            "spritePath": "Images/Viola"
                         }
                     ],
                     "correctAnswerIndex": 2
@@ -584,19 +584,19 @@
                     "answerOptions": [
                         {
                             "answerText": "classical guitar",
-                            "spritePath": ""
+                            "spritePath": "Images/Classical Guitar"
                         },
                         {
                             "answerText": "electric guitar",
-                            "spritePath": ""
+                            "spritePath": "Images/Electric Guitar"
                         },
                         {
                             "answerText": "violin",
-                            "spritePath": ""
+                            "spritePath": "Images/Violin"
                         },
                         {
                             "answerText": "cello",
-                            "spritePath": ""
+                            "spritePath": "Images/Cello"
                         }
                     ],
                     "correctAnswerIndex": 0
@@ -607,19 +607,19 @@
                     "answerOptions": [
                         {
                             "answerText": "flute",
-                            "spritePath": ""
+                            "spritePath": "Images/Flute"
                         },
                         {
                             "answerText": "oboe",
-                            "spritePath": ""
+                            "spritePath": "Images/Oboe"
                         },
                         {
                             "answerText": "bassoon",
-                            "spritePath": ""
+                            "spritePath": "Images/Bassoon"
                         },
                         {
                             "answerText": "clarinet",
-                            "spritePath": ""
+                            "spritePath": "Images/Clarinet"
                         }
                     ],
                     "correctAnswerIndex": 1
@@ -630,19 +630,19 @@
                     "answerOptions": [
                         {
                             "answerText": "clarinet",
-                            "spritePath": ""
+                            "spritePath": "Images/Clarinet"
                         },
                         {
                             "answerText": "flute",
-                            "spritePath": ""
+                            "spritePath": "Images/Flute"
                         },
                         {
                             "answerText": "oboe",
-                            "spritePath": ""
+                            "spritePath": "Images/Oboe"
                         },
                         {
                             "answerText": "bassoon",
-                            "spritePath": ""
+                            "spritePath": "Images/Bassoon"
                         }
                     ],
                     "correctAnswerIndex": 2
@@ -653,19 +653,19 @@
                     "answerOptions": [
                         {
                             "answerText": "bassoon",
-                            "spritePath": ""
+                            "spritePath": "Images/Bassoon"
                         },
                         {
                             "answerText": "oboe",
-                            "spritePath": ""
+                            "spritePath": "Images/Oboe"
                         },
                         {
                             "answerText": "flute",
-                            "spritePath": ""
+                            "spritePath": "Images/Flute"
                         },
                         {
                             "answerText": "clarinet",
-                            "spritePath": ""
+                            "spritePath": "Images/Clarinet"
                         }
                     ],
                     "correctAnswerIndex": 1
@@ -676,19 +676,19 @@
                     "answerOptions": [
                         {
                             "answerText": "clarinet",
-                            "spritePath": ""
+                            "spritePath": "Images/Clarinet"
                         },
                         {
                             "answerText": "saxophone",
-                            "spritePath": ""
+                            "spritePath": "Images/Saxophone"
                         },
                         {
                             "answerText": "trumpet",
-                            "spritePath": ""
+                            "spritePath": "Images/Trumpet"
                         },
                         {
                             "answerText": "oboe",
-                            "spritePath": ""
+                            "spritePath": "Images/Oboe"
                         }
                     ],
                     "correctAnswerIndex": 1
@@ -699,19 +699,19 @@
                     "answerOptions": [
                         {
                             "answerText": "trumpet",
-                            "spritePath": ""
+                            "spritePath": "Images/Trumpet"
                         },
                         {
                             "answerText": "clarinet",
-                            "spritePath": ""
+                            "spritePath": "Images/Clarinet"
                         },
                         {
                             "answerText": "saxophone",
-                            "spritePath": ""
+                            "spritePath": "Images/Saxophone"
                         },
                         {
                             "answerText": "brass",
-                            "spritePath": ""
+                            "spritePath": "Images/Brass"
                         }
                     ],
                     "correctAnswerIndex": 2
@@ -722,19 +722,19 @@
                     "answerOptions": [
                         {
                             "answerText": "electric piano",
-                            "spritePath": ""
+                            "spritePath": "Images/Electric Piano"
                         },
                         {
                             "answerText": "organ",
-                            "spritePath": ""
+                            "spritePath": "Images/Organ"
                         },
                         {
                             "answerText": "accordion",
-                            "spritePath": ""
+                            "spritePath": "Images/accordion"
                         },
                         {
                             "answerText": "harpsichord",
-                            "spritePath": ""
+                            "spritePath": "Images/Harpsichord"
                         }
                     ],
                     "correctAnswerIndex": 1
@@ -745,19 +745,19 @@
                     "answerOptions": [
                         {
                             "answerText": "snare",
-                            "spritePath": ""
+                            "spritePath": "Images/Snare"
                         },
                         {
                             "answerText": "drum kit",
-                            "spritePath": ""
+                            "spritePath": "Images/Drum Kit"
                         },
                         {
                             "answerText": "kick drum",
-                            "spritePath": ""
+                            "spritePath": "Images/Kick Drum"
                         },
                         {
                             "answerText": "cymbal",
-                            "spritePath": ""
+                            "spritePath": "Images/Cymbal"
                         }
                     ],
                     "correctAnswerIndex": 0
@@ -768,19 +768,19 @@
                     "answerOptions": [
                         {
                             "answerText": "harpsichord",
-                            "spritePath": ""
+                            "spritePath": "Images/Harpsichord"
                         },
                         {
                             "answerText": "electric piano",
-                            "spritePath": ""
+                            "spritePath": "Images/Electric Piano"
                         },
                         {
                             "answerText": "organ",
-                            "spritePath": ""
+                            "spritePath": "Images/Organ"
                         },
                         {
                             "answerText": "accordion",
-                            "spritePath": ""
+                            "spritePath": "Images/accordion"
                         }
                     ],
                     "correctAnswerIndex": 2
@@ -791,19 +791,19 @@
                     "answerOptions": [
                         {
                             "answerText": "electric piano",
-                            "spritePath": ""
+                            "spritePath": "Images/Electric Piano"
                         },
                         {
                             "answerText": "synthesizer",
-                            "spritePath": ""
+                            "spritePath": "Images/Synthesizer"
                         },
                         {
                             "answerText": "organ",
-                            "spritePath": ""
+                            "spritePath": "Images/Organ"
                         },
                         {
                             "answerText": "accordion",
-                            "spritePath": ""
+                            "spritePath": "Images/accordion"
                         }
                     ],
                     "correctAnswerIndex": 1
@@ -814,19 +814,19 @@
                     "answerOptions": [
                         {
                             "answerText": "electric piano",
-                            "spritePath": ""
+                            "spritePath": "Images/Electric Piano"
                         },
                         {
                             "answerText": "organ",
-                            "spritePath": ""
+                            "spritePath": "Images/Organ"
                         },
                         {
                             "answerText": "piano",
-                            "spritePath": ""
+                            "spritePath": "Images/Piano"
                         },
                         {
                             "answerText": "synthesizer",
-                            "spritePath": ""
+                            "spritePath": "Images/Synthesizer"
                         }
                     ],
                     "correctAnswerIndex": 3
@@ -837,19 +837,19 @@
                     "answerOptions": [
                         {
                             "answerText": "triangle",
-                            "spritePath": ""
+                            "spritePath": "Images/Triangle"
                         },
                         {
                             "answerText": "cymbal",
-                            "spritePath": ""
+                            "spritePath": "Images/Cymbal"
                         },
                         {
                             "answerText": "hi-hat",
-                            "spritePath": ""
+                            "spritePath": "Images/Hi-hat"
                         },
                         {
                             "answerText": "snare",
-                            "spritePath": ""
+                            "spritePath": "Images/Snare"
                         }
                     ],
                     "correctAnswerIndex": 0
@@ -860,19 +860,19 @@
                     "answerOptions": [
                         {
                             "answerText": "trumpet",
-                            "spritePath": ""
+                            "spritePath": "Images/Trumpet"
                         },
                         {
                             "answerText": "brass",
-                            "spritePath": ""
+                            "spritePath": "Images/Brass"
                         },
                         {
                             "answerText": "trombone",
-                            "spritePath": ""
+                            "spritePath": "Images/Trombone"
                         },
                         {
                             "answerText": "tuba",
-                            "spritePath": ""
+                            "spritePath": "Images/Tuba"
                         }
                     ],
                     "correctAnswerIndex": 2
@@ -883,19 +883,19 @@
                     "answerOptions": [
                         {
                             "answerText": "tuba",
-                            "spritePath": ""
+                            "spritePath": "Images/Tuba"
                         },
                         {
                             "answerText": "trombone",
-                            "spritePath": ""
+                            "spritePath": "Images/Trombone"
                         },
                         {
                             "answerText": "trumpet",
-                            "spritePath": ""
+                            "spritePath": "Images/Trumpet"
                         },
                         {
                             "answerText": "brass",
-                            "spritePath": ""
+                            "spritePath": "Images/Brass"
                         }
                     ],
                     "correctAnswerIndex": 1
@@ -906,19 +906,19 @@
                     "answerOptions": [
                         {
                             "answerText": "brass",
-                            "spritePath": ""
+                            "spritePath": "Images/Brass"
                         },
                         {
                             "answerText": "tuba",
-                            "spritePath": ""
+                            "spritePath": "Images/Tuba"
                         },
                         {
                             "answerText": "trombone",
-                            "spritePath": ""
+                            "spritePath": "Images/Trombone"
                         },
                         {
                             "answerText": "trumpet",
-                            "spritePath": ""
+                            "spritePath": "Images/Trumpet"
                         }
                     ],
                     "correctAnswerIndex": 1
@@ -929,19 +929,19 @@
                     "answerOptions": [
                         {
                             "answerText": "violin",
-                            "spritePath": ""
+                            "spritePath": "Images/Violin"
                         },
                         {
                             "answerText": "cello",
-                            "spritePath": ""
+                            "spritePath": "Images/Cello"
                         },
                         {
                             "answerText": "viola",
-                            "spritePath": ""
+                            "spritePath": "Images/Viola"
                         },
                         {
                             "answerText": "double bass",
-                            "spritePath": ""
+                            "spritePath": "Images/Double Bass"
                         }
                     ],
                     "correctAnswerIndex": 2
@@ -952,19 +952,19 @@
                     "answerOptions": [
                         {
                             "answerText": "viola",
-                            "spritePath": ""
+                            "spritePath": "Images/Viola"
                         },
                         {
                             "answerText": "violin",
-                            "spritePath": ""
+                            "spritePath": "Images/Violin"
                         },
                         {
                             "answerText": "cello",
-                            "spritePath": ""
+                            "spritePath": "Images/Cello"
                         },
                         {
                             "answerText": "double bass",
-                            "spritePath": ""
+                            "spritePath": "Images/Double Bass"
                         }
                     ],
                     "correctAnswerIndex": 1
@@ -975,19 +975,19 @@
                     "answerOptions": [
                         {
                             "answerText": "cello",
-                            "spritePath": ""
+                            "spritePath": "Images/Cello"
                         },
                         {
                             "answerText": "double bass",
-                            "spritePath": ""
+                            "spritePath": "Images/Double Bass"
                         },
                         {
                             "answerText": "violin",
-                            "spritePath": ""
+                            "spritePath": "Images/Violin"
                         },
                         {
                             "answerText": "viola",
-                            "spritePath": ""
+                            "spritePath": "Images/Viola"
                         }
                     ],
                     "correctAnswerIndex": 2
@@ -998,19 +998,19 @@
                     "answerOptions": [
                         {
                             "answerText": "violin",
-                            "spritePath": ""
+                            "spritePath": "Images/Violin"
                         },
                         {
                             "answerText": "viola",
-                            "spritePath": ""
+                            "spritePath": "Images/Viola"
                         },
                         {
                             "answerText": "cello",
-                            "spritePath": ""
+                            "spritePath": "Images/Cello"
                         },
                         {
                             "answerText": "double bass",
-                            "spritePath": ""
+                            "spritePath": "Images/Double Bass"
                         }
                     ],
                     "correctAnswerIndex": 0
@@ -1021,19 +1021,19 @@
                     "answerOptions": [
                         {
                             "answerText": "viola",
-                            "spritePath": ""
+                            "spritePath": "Images/Viola"
                         },
                         {
                             "answerText": "cello",
-                            "spritePath": ""
+                            "spritePath": "Images/Cello"
                         },
                         {
                             "answerText": "double bass",
-                            "spritePath": ""
+                            "spritePath": "Images/Double Bass"
                         },
                         {
                             "answerText": "violin",
-                            "spritePath": ""
+                            "spritePath": "Images/Violin"
                         }
                     ],
                     "correctAnswerIndex": 3
