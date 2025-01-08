@@ -61,12 +61,6 @@ public class OptionsModalManager : MonoBehaviour
 
     private void AddTeam()
     {
-        if (teamEntries.Count >= gameSettings.maxTeams)
-        {
-            Debug.Log("Maximum number of teams reached!");
-            return;
-        }
-
         GameObject teamEntryObj = Instantiate(teamEntryPrefab, teamListContent);
         TeamEntry teamEntry = teamEntryObj.GetComponent<TeamEntry>();
         teamEntries.Add(teamEntry);
@@ -76,12 +70,6 @@ public class OptionsModalManager : MonoBehaviour
 
     private void RemoveTeam()
     {
-        if (teamEntries.Count <= 1)
-        {
-            Debug.Log("Cannot remove last team!");
-            return;
-        }
-
         TeamEntry teamEntry = teamEntries[teamEntries.Count - 1];
         teamEntries.Remove(teamEntry);
         Destroy(teamEntry.gameObject);

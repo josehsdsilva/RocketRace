@@ -57,13 +57,17 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        gameUI.SetActive(true);
+        gameUI.SetActive(false);
+
+        notificationController.ShowNotification("Loading", "Wait a bit while the game assets are loading");
 
         questionDataLoader.LoadQuestionData(OnQuestionDataLoaded);
     }
 
     private void OnQuestionDataLoaded(List<QuestionThemeData> loadedData)
     {
+        notificationController.HideNotification();
+        gameUI.SetActive(true);
         questionDatas = loadedData;
         Debug.Log("Question data loaded and ready to use");
         questionTheme = gameSettings.questionTheme;

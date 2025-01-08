@@ -20,10 +20,8 @@ public class SpaceshipParticleSystemsController : MonoBehaviour
 
     internal void OnAnswer(bool correct)
     {
-        Debug.Log("OnAnswer");
         for (int i = 0; i < particleSystems.Count; i++)
         {
-            Debug.Log(particleSystems[i].gameObject, particleSystems[i].gameObject);
             var emission = particleSystems[i].emission;
             emission.rateOverTime = correct ? 10 : 1;
         }

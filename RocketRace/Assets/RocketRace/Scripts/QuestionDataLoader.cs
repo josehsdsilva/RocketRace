@@ -226,20 +226,37 @@ public class QuestionDataLoader : MonoBehaviour
     }
 
     private Sprite LoadAnswerSprite(string spritePath)
+{
+    if (string.IsNullOrEmpty(spritePath))
     {
-        if (string.IsNullOrEmpty(spritePath))
-        {
-            Debug.LogWarning("Sprite path is empty");
-            return null;
-        }
-
-        var sprite = Resources.Load<Sprite>(spritePath);
-        if (sprite == null)
-        {
-            Debug.LogError($"Failed to load sprite at path: {spritePath}");
-        }
-        return sprite;
+        Debug.LogWarning("Sprite path is empty");
+        return null;
     }
+
+    // Append .png extension if not present
+    if (!spritePath.EndsWith(".png"))
+    {
+        spritePath += ".png";
+    }
+
+    string fullPath = Path.Combine(Application.streamingAssetsPath, spritePath);
+    
+    if (!File.Exists(fullPath))
+    {
+        Debug.LogError($"Failed to find sprite at path: {fullPath}");
+        return null;
+    }
+
+    byte[] imageData = File.ReadAllBytes(fullPath);
+    Texture2D texture = new Texture2D(2, 2);
+    if (!texture.LoadImage(imageData))
+    {
+        Debug.LogError($"Failed to load image data at path: {fullPath}");
+        return null;
+    }
+
+    return Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+}
 
     private QuestionTheme ParseThemeEnum(string themeName)
     {

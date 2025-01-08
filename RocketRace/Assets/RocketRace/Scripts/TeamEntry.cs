@@ -35,8 +35,8 @@ public class TeamEntry : MonoBehaviour
         return new GameSettingsSO.TeamData
         {
             teamName = string.IsNullOrEmpty(teamNameInput.text) ? "Team" : teamNameInput.text,
-            spaceshipColor = (SpaceshipColor)spaceshipTypeDropdown.value,
-            spaceshipType = (SpaceshipType)spaceshipColorDropdown.value
+            spaceshipType = (SpaceshipType)spaceshipTypeDropdown.value,
+            spaceshipColor = (SpaceshipColor)spaceshipColorDropdown.value
         };
     }
 }

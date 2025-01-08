@@ -15,7 +15,7 @@ public class NotificationController : MonoBehaviour
 
     private Action onClose;
 
-    private void Start()
+    private void Awake()
     {
         closeButton.onClick.AddListener(HideNotification);
         notificationPanel.SetActive(false);
