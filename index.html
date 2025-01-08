@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | RocketRace</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="shortcut icon" href="Build/TemplateData/favicon.ico">
+    <link rel="stylesheet" href="Build/TemplateData/style.css">
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -57,11 +57,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Build.loader.js";
+      var loaderUrl = buildUrl + "/Build/Build.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Build.data.br",
-        frameworkUrl: buildUrl + "/Build.framework.js.br",
-        codeUrl: buildUrl + "/Build.wasm.br",
+        dataUrl: buildUrl + "/Build/Build.data.br",
+        frameworkUrl: buildUrl + "/Build/Build.framework.js.br",
+        codeUrl: buildUrl + "/Build/Build.wasm.br",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "RocketRace",
