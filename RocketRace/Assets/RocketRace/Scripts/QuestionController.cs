@@ -17,6 +17,10 @@ public class QuestionController : MonoBehaviour
     [SerializeField] private Transform answerOptionsParent;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private List<RenderTexture> renderTextures;
+
+    [Header("Settings")]
+    [SerializeField] private AudioClip correctSound;
+    [SerializeField] private AudioClip wrongSound;
     
     [Header("Data")]
     [SerializeField] private GameSettingsSO gameSettings;
@@ -78,5 +82,13 @@ public class QuestionController : MonoBehaviour
 
         answering = false;
         onAnswered?.Invoke(currentQuestionData.correctAnswerIndex == answerIndex);
+        PlayAnswerSound(currentQuestionData.correctAnswerIndex == answerIndex);
+    }
+
+    private void PlayAnswerSound(bool correct)
+    {
+        audioSource.Stop();
+        audioSource.clip = correct ? correctSound : wrongSound;
+        audioSource.Play();
     }
 }

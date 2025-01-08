@@ -41,9 +41,10 @@ public class GameManager : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private QuestionController questionController;
-    [SerializeField] private TeamScore teamScorePrefab;
-    [SerializeField] private Transform teamScoresParent;
     [SerializeField] private NotificationController notificationController;
+    [SerializeField] private TeamScoresController teamScoresController;
+    [SerializeField] private WinnersDisplayController winnersDisplayController;
+    [SerializeField] private GameObject gameUI;
 
     private int currentRound = 0;
     private int currentTeamIndex = 0;
@@ -52,10 +53,11 @@ public class GameManager : MonoBehaviour
     private List<QuestionData> questionData;
     private List<QuestionThemeData> questionDatas;
     private QuestionData currentQuestionData;
-    private List<TeamScore> teamScores = new List<TeamScore>();
 
     private void Start()
     {
+        gameUI.SetActive(true);
+
         questionDataLoader.LoadQuestionData(OnQuestionDataLoaded);
     }
 
@@ -66,19 +68,11 @@ public class GameManager : MonoBehaviour
         questionTheme = gameSettings.questionTheme;
         questionData = questionDatas.Find(x => x.theme == questionTheme).questions;
         questionData = questionData.OrderBy(x => UnityEngine.Random.value).ToList();
-        InitializeScores();
+        teamScoresController.InitializeScores();
         StartNextTurn();
     }
     
-    private void InitializeScores()
-    {
-        for (int i = 0; i < gameSettings.currentTeams.Count; i++)
-        {
-            TeamScore teamScore = Instantiate(teamScorePrefab, teamScoresParent);
-            teamScore.SetTeamScore(gameSettings.currentTeams[i].teamName, 0, i);
-            teamScores.Add(teamScore);
-        }
-    }
+    
 
     private void StartNextTurn()
     {
@@ -107,7 +101,7 @@ public class GameManager : MonoBehaviour
             notificationController.ShowNotification("Incorrect Answer!", "Better luck next time!", OnNotificationClosed);
         }
 
-        teamScores[currentTeamIndex].AddScore(isCorrect);
+        teamScoresController.UpdateTeamScore(currentTeamIndex, isCorrect);
     }
 
     private void OnNotificationClosed()
@@ -123,6 +117,7 @@ public class GameManager : MonoBehaviour
 
     private void ShowWinners()
     {
-        // ToDo: ShowWinners
+        gameUI.SetActive(false);
+        winnersDisplayController.ShowWinners(teamScoresController.GetWinners());
     }
 }
