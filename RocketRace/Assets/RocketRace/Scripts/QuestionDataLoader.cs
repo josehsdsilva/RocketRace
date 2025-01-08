@@ -76,12 +76,60 @@ public class AudioLoader : CustomYieldInstruction
         isDone = true;
         www?.Dispose();
     }
+
     string GetAudioFileName(string fullPath)
     {
         return fullPath.Split('/').Last();
     }
 }
 
+public class SpriteLoader : CustomYieldInstruction
+{
+    private UnityWebRequest www;
+    public Sprite Sprite { get; private set; }
+    public string Error { get; private set; }
+    private bool isDone;
+
+    public override bool keepWaiting => !isDone;
+
+    public SpriteLoader(string spritePath)
+    {
+        if (string.IsNullOrEmpty(spritePath))
+        {
+            isDone = true;
+            return;
+        }
+
+        if (!spritePath.EndsWith(".png"))
+        {
+            spritePath += ".png";
+        }
+
+        string fullPath = Path.Combine(Application.streamingAssetsPath, spritePath);
+        #if UNITY_WEBGL && !UNITY_EDITOR
+            fullPath = System.Uri.EscapeUriString(fullPath);
+        #endif
+
+        www = UnityWebRequestTexture.GetTexture(fullPath);
+        www.SendWebRequest().completed += _ => OnRequestComplete(spritePath);
+    }
+
+    private void OnRequestComplete(string spritePath)
+    {
+        if (www.result == UnityWebRequest.Result.Success)
+        {
+            Texture2D texture = DownloadHandlerTexture.GetContent(www);
+            Sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+        }
+        else
+        {
+            Error = www.error;
+            Debug.LogError($"Failed to load sprite {spritePath}. Error: {Error}");
+        }
+        isDone = true;
+        www?.Dispose();
+    }
+}
 
 public class QuestionDataLoader : MonoBehaviour
 {
@@ -193,70 +241,33 @@ public class QuestionDataLoader : MonoBehaviour
     {
         foreach (var jsonQuestion in jsonQuestions)
         {
-            // Load audio
             var audioLoader = new AudioLoader(jsonQuestion.questionAudio);
             yield return audioLoader;
+
+            var answerOptions = new List<AnswerData>();
+            foreach (var option in jsonQuestion.answerOptions)
+            {
+                var spriteLoader = new SpriteLoader(option.spritePath);
+                yield return spriteLoader;
+
+                answerOptions.Add(new AnswerData
+                {
+                    answerText = option.answerText,
+                    sprite = spriteLoader.Sprite
+                });
+            }
 
             var questionData = new QuestionData
             {
                 questionText = jsonQuestion.questionText,
                 questionAudio = audioLoader.Clip,
-                answerOptions = CreateAnswerOptions(jsonQuestion.answerOptions, jsonQuestion.correctAnswerIndex),
+                answerOptions = answerOptions,
                 correctAnswerIndex = jsonQuestion.correctAnswerIndex
             };
         
             result.Add(questionData);
         }
     }
-
-    private List<AnswerData> CreateAnswerOptions(JSONAnswerOption[] options, int correctIndex)
-    {
-        var answers = new List<AnswerData>();
-    
-        for (int i = 0; i < options.Length; i++)
-        {
-            answers.Add(new AnswerData
-            {
-                answerText = options[i].answerText,
-                sprite = LoadAnswerSprite(options[i].spritePath)
-            });
-        }
-    
-        return answers;
-    }
-
-    private Sprite LoadAnswerSprite(string spritePath)
-{
-    if (string.IsNullOrEmpty(spritePath))
-    {
-        Debug.LogWarning("Sprite path is empty");
-        return null;
-    }
-
-    // Append .png extension if not present
-    if (!spritePath.EndsWith(".png"))
-    {
-        spritePath += ".png";
-    }
-
-    string fullPath = Path.Combine(Application.streamingAssetsPath, spritePath);
-    
-    if (!File.Exists(fullPath))
-    {
-        Debug.LogError($"Failed to find sprite at path: {fullPath}");
-        return null;
-    }
-
-    byte[] imageData = File.ReadAllBytes(fullPath);
-    Texture2D texture = new Texture2D(2, 2);
-    if (!texture.LoadImage(imageData))
-    {
-        Debug.LogError($"Failed to load image data at path: {fullPath}");
-        return null;
-    }
-
-    return Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
-}
 
     private QuestionTheme ParseThemeEnum(string themeName)
     {
